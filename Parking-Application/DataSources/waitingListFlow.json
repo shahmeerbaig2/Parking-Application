@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "d3a316df-b2e8-4ca5-bc09-d4b267052241",
+    "Name": "waitingListFlow",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "2b36658f-59df-ee11-904d-000d3adf7783"
+  }
+]

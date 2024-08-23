@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cra95_smartparkings",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cra95_smartparking",
+    "MaxGetRowsCount": 500,
+    "Name": "Smart Parkings",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cra95_building": "building",
+      "cra95_id": "ID",
+      "cra95_location": "location",
+      "cra95_request_Smart_cra95_smartparking": "Requests",
+      "cra95_requestID": "request ID",
+      "cra95_smartparking_AsyncOperations": "System Jobs",
+      "cra95_smartparking_BulkDeleteFailures": "Bulk Delete Failures",
+      "cra95_smartparking_DuplicateBaseRecord": "Duplicate Records (cra95_smartparking_DuplicateBaseRecord)",
+      "cra95_smartparking_DuplicateMatchingRecord": "Duplicate Records (cra95_smartparking_DuplicateMatchingRecord)",
+      "cra95_smartparking_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cra95_smartparking_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cra95_smartparking_ProcessSession": "Process Sessions",
+      "cra95_smartparking_SyncErrors": "Sync Errors",
+      "cra95_smartparkingid": "Smart Parking",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Smart Parkings",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Smart Parkings (Views)",
+    "Name": "_cra95_smartparking_views",
+    "RelatedEntityName": "Smart Parkings",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "17ac8af5-924c-4c5f-9c12-d4a200ed9c87": "Active Smart Parkings",
+      "4145758b-96c1-4436-8adb-32accf596821": "Smart Parking Advanced Find View",
+      "4f8daa78-b0a8-4ed9-aed8-14f43fffcbf7": "Smart Parking Associated View",
+      "830a5f6d-0c38-4b8e-abb1-bacdf2e944c4": "Inactive Smart Parkings",
+      "f2a3cd71-e2b0-436e-b9b6-bab708bd798e": "Smart Parking Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (Smart Parkings)",
+    "Name": "cra95_smartparking_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Smart Parkings"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Smart Parkings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Smart Parkings)",
+    "Name": "cra95_smartparking_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Smart Parkings"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Smart Parkings",
+    "Type": "OptionSetInfo"
+  }
+]

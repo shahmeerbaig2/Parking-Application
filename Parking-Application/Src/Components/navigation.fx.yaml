@@ -1,0 +1,137 @@
+navigation As CanvasComponent:
+    DashboardScreen: =Dashboard
+    Fill: =RGBA(98, 14, 26, 1)
+    Height: |
+        =App.Height-70
+    MenuItems: |-
+        =Table(
+            {
+                ID: 0,
+                tab1: " General Location",
+                Screen: GeneralScreen
+            },
+            {
+                ID: 1,
+                tab1: " Smart Location",
+                Screen: SmartScreen
+            },
+            {
+                ID: 2,
+                tab1: "parking slot",
+                Screen: LocationSetup
+            },
+            {
+                ID: 3,
+                tab1: "parking group"
+            },
+            {
+                ID: 4,
+                tab1: "criteria"
+            }
+        )
+    menuvisible: =true
+    pressedFillActive: =
+    Width: =300
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Label5 As label:
+        Color: =RGBA(241, 244, 249, 1)
+        Text: ="Setup"
+        X: =54
+        Y: =78
+        ZIndex: =1
+
+    Icon3 As icon.Person:
+        Color: =RGBA(241, 244, 249, 1)
+        Height: =25
+        Icon: =Icon.Person
+        Width: =40
+        X: =14
+        Y: =85
+        ZIndex: =2
+
+    Icon4 As icon.ArrowDown:
+        Color: =RGBA(241, 244, 249, 1)
+        Height: =19
+        OnSelect: =Set(isVisible,!isVisible)
+        Width: =33
+        X: =192
+        Y: =91
+        ZIndex: =3
+
+    Gallery2 As gallery.galleryVertical:
+        '#CopilotOverlayLabel': ="Filtered"
+        DelayItemLoading: =true
+        Height: =580
+        Items: =navigation.MenuItems
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateFill: =If(ThisItem.Screen=App.ActiveScreen,RGBA(160, 64, 8, 0.5),Color.Transparent)
+        TemplateSize: =50
+        Visible: =If(isVisible,true,false)
+        Width: =Parent.Width
+        Y: =118
+        ZIndex: =4
+
+        Button4 As button:
+            DisabledBorderColor: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(184, 0, 0, 1)
+            DisabledFill: =RGBA(184, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            HoverBorderColor: =Self.BorderColor
+            HoverColor: =RGBA(160, 64, 8, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(ThisItem.Screen);
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(160, 64, 8, 1)
+            PressedFill: =RGBA(132, 40, 38, 1)
+            Text: =""
+            Width: =290
+            ZIndex: =1
+
+        Label6 As label:
+            Color: =RGBA(241, 244, 249, 1)
+            DisabledBorderColor: =RGBA(184, 0, 0, 1)
+            DisabledFill: =RGBA(184, 0, 0, 1)
+            Height: =50
+            HoverColor: =RGBA(214, 221, 224, 1)
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.tab1
+            Width: =154
+            X: =48
+            ZIndex: =2
+
+    Icon13 As icon.Items:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =50
+        Icon: =Icon.Items
+        Width: =30
+        X: =24
+        Y: =28
+        ZIndex: =5
+
+    Button3 As button:
+        Fill: =If(navigation.DashboardScreen=App.ActiveScreen,RGBA(160, 64, 8, 0.5),Color.Transparent)
+        Height: =50
+        HoverColor: =RGBA(160, 64, 8, 1)
+        HoverFill: =
+        OnSelect: =Navigate(navigation.DashboardScreen);
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(184, 0, 0, 1)
+        Text: =""
+        Width: =300
+        Y: =28
+        ZIndex: =6
+
+    Label4 As label:
+        Color: =RGBA(241, 244, 249, 1)
+        Height: =51
+        Text: ="Dashboard"
+        Width: =100
+        X: =54
+        Y: =27
+        ZIndex: =7
+

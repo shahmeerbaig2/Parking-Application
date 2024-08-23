@@ -1,0 +1,871 @@
+RequestScreen As screen:
+    Fill: =RGBA(237, 237, 237, 1)
+
+    Container3_10 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Header_4 As Header:
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+
+        MainContainer_6 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =2
+
+            SideBarContainer_6 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =If(!isVisible1,0,280)
+                ZIndex: =1
+
+                BMSNavigation_5 As BMSNavigation_4:
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+
+            Container19_6 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =2
+
+                subheader1_14 As subheader1_2:
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+
+                Container4_6 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    Container3_11 As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        Container6_4 As groupContainer.manualLayoutContainer:
+                            Fill: =Color.White
+                            Height: =597
+                            Width: =If(RequestScreen.Size=1,350,1322)
+                            X: =14
+                            Y: =12
+                            ZIndex: =1
+
+                            Container17_4 As groupContainer.manualLayoutContainer:
+                                Height: =If(RequestScreen.Size=1,103,187)
+                                Width: =If(SideBarContainer_6.Width=0,1275,1030)
+                                X: =17
+                                Y: =20
+                                ZIndex: =3
+
+                                FormViewer1_1 As formViewer:
+                                    DataSource: =Employee_Details
+                                    Height: =Parent.Height
+                                    Item: |
+                                        =LookUp(Employee_Details,'Employee Number'="0")
+                                    NumberOfColumns: =4
+                                    Width: =If(RequestScreen.Size=1,318,1275)
+                                    ZIndex: =2
+
+                                    "'Employee Name_DataCard1_1' As typedDataCard.textualViewCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_employeename"
+                                        Default: =ThisItem.'Employee Name'
+                                        DisplayMode: =DisplayMode.View
+                                        DisplayName: =DataSourceInfo([@Employee_Details],DataSourceInfo.DisplayName,cra95_employeename)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =82
+                                        Required: =true
+                                        Width: =318
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =2
+
+                                        DataCardKey29_1 As label:
+                                            AutoHeight: =true
+                                            Height: =34
+                                            Text: =Parent.DisplayName 
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            ZIndex: =1
+
+                                        DataCardValue28_1 As label:
+                                            AutoHeight: =true
+                                            DisplayMode: =Parent.DisplayMode
+                                            Height: =27
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Text: =Parent.Default
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey29_1.Y + DataCardKey29_1.Height + 5
+                                            ZIndex: =2
+
+                                    Mobile_DataCard1_1 As typedDataCard.textualViewCard:
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_mobile"
+                                        Default: =ThisItem.Mobile
+                                        DisplayMode: =DisplayMode.View
+                                        DisplayName: =DataSourceInfo([@Employee_Details],DataSourceInfo.DisplayName,cra95_mobile)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =If(RequestScreen.Size=1,0,103)
+                                        Required: =true
+                                        Visible: =If(RequestScreen.Size=1,false,true)
+                                        Width: =If(RequestScreen.Size=1,0,318)
+                                        X: =1
+                                        Y: =0
+                                        ZIndex: =2
+
+                                        DataCardKey24_1 As label:
+                                            AutoHeight: =true
+                                            Height: =34
+                                            Text: =Parent.DisplayName
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue23_1 As label:
+                                            AutoHeight: =true
+                                            DisplayMode: =Parent.DisplayMode
+                                            Height: =27
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Text: =Parent.Default
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey24_1.Y + DataCardKey24_1.Height + 5
+                                            ZIndex: =2
+
+                                    Email_DataCard1_1 As typedDataCard.emailViewCard:
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_email"
+                                        Default: =ThisItem.Email
+                                        DisplayMode: =DisplayMode.View
+                                        DisplayName: =DataSourceInfo([@Employee_Details],DataSourceInfo.DisplayName,cra95_email)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =If(RequestScreen.Size=1,0,103)
+                                        Required: =true
+                                        Visible: =If(RequestScreen.Size=1,false,true)
+                                        Width: =If(RequestScreen.Size=1,0,318)
+                                        X: =2
+                                        Y: =0
+                                        ZIndex: =2
+
+                                        DataCardKey25_1 As label:
+                                            AutoHeight: =true
+                                            Height: =34
+                                            Text: =Parent.DisplayName
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue24_1 As htmlViewer:
+                                            AutoHeight: =true
+                                            DisplayMode: =Parent.DisplayMode
+                                            Height: =31
+                                            HtmlText: |-
+                                                ="<a href='mailto:" & Parent.Default & "'>" & Parent.Default & "</a>"
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey25_1.Y + DataCardKey25_1.Height + 5
+                                            ZIndex: =2
+
+                                    "'Job Title_DataCard1_1' As typedDataCard.textualViewCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_jobtitle"
+                                        Default: =ThisItem.'Job Title'
+                                        DisplayMode: =DisplayMode.View
+                                        DisplayName: =DataSourceInfo([@Employee_Details],DataSourceInfo.DisplayName,cra95_jobtitle)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =If(RequestScreen.Size=1,0,103)
+                                        Required: =true
+                                        Visible: =If(RequestScreen.Size=1,false,true)
+                                        Width: =318
+                                        X: =3
+                                        Y: =0
+                                        ZIndex: =2
+
+                                        DataCardKey26_1 As label:
+                                            AutoHeight: =true
+                                            Height: =34
+                                            Text: =Parent.DisplayName
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue25_1 As label:
+                                            AutoHeight: =true
+                                            DisplayMode: =Parent.DisplayMode
+                                            Height: =27
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Text: =Parent.Default
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey26_1.Y + DataCardKey26_1.Height + 5
+                                            ZIndex: =2
+
+                                    "'Employee type_DataCard1_1' As typedDataCard.textualViewCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_employeetype"
+                                        Default: =ThisItem.'Employee type'
+                                        DisplayMode: =DisplayMode.View
+                                        DisplayName: =DataSourceInfo([@Employee_Details],DataSourceInfo.DisplayName,cra95_employeetype)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =If(RequestScreen.Size=1,0,75)
+                                        Required: =false
+                                        Visible: =If(RequestScreen.Size=1,false,true)
+                                        Width: =If(RequestScreen.Size=1,0,318)
+                                        X: =0
+                                        Y: =1
+                                        ZIndex: =2
+
+                                        DataCardKey28_1 As label:
+                                            AutoHeight: =true
+                                            Height: =34
+                                            Text: =Parent.DisplayName
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue27_1 As label:
+                                            AutoHeight: =true
+                                            DisplayMode: =Parent.DisplayMode
+                                            Height: =27
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Text: =Parent.Default
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey28_1.Y + DataCardKey28_1.Height + 5
+                                            ZIndex: =2
+
+                                    "'Work base location_DataCard1_1' As typedDataCard.textualViewCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_workbaselocation"
+                                        Default: =ThisItem.'Work base location'
+                                        DisplayMode: =DisplayMode.View
+                                        DisplayName: =DataSourceInfo([@Employee_Details],DataSourceInfo.DisplayName,cra95_workbaselocation)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =If(RequestScreen.Size=1,0,75)
+                                        Required: =true
+                                        Visible: =If(RequestScreen.Size=1,false,true)
+                                        Width: =If(RequestScreen.Size=1,0,318)
+                                        X: =1
+                                        Y: =1
+                                        ZIndex: =2
+
+                                        DataCardKey27_1 As label:
+                                            AutoHeight: =true
+                                            Height: =34
+                                            Text: =Parent.DisplayName
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue26_1 As label:
+                                            AutoHeight: =true
+                                            DisplayMode: =Parent.DisplayMode
+                                            Height: =27
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Text: =Parent.Default
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey27_1.Y + DataCardKey27_1.Height + 5
+                                            ZIndex: =2
+
+                            Container18_1 As groupContainer.manualLayoutContainer:
+                                Height: =If(RequestScreen.Size=1,667,374)
+                                Width: =If(SideBarContainer_6.Width=0,1275,1030)
+                                X: =17
+                                Y: =If(RequestScreen.Size=1,41,207)
+                                ZIndex: =5
+
+                                Form3_1 As form.PowerApps_CoreControls_Form:
+                                    AcceptsFocus: =true
+                                    DataSource: =Requests
+                                    DefaultMode: =FormMode.New
+                                    Height: =374
+                                    OnSuccess: |
+                                        =
+                                        //Set(buildingInfo,Text(DropdownCanvas3_1.Selected.cra95_building));
+                                        Set(reqID,Form3_1.LastSubmit.Request);
+                                        Set(empEmail,(LookUp(Employee_Details,'Employee Number'="0").LineManager));
+                                        //Set(locationInfo,Text(DropdownCanvas5_1.Selected.Value));
+                                        Set(empRef,(LookUp(Employee_Details,'Employee Number'="0").Employee_Details));
+                                        Set(
+                                            ReqDay,
+                                            ""
+                                        );
+                                        'PowerAppV2->Sendanemail(V2)'.Run(reqID,"https://apps.powerapps.com/play/e/ee98ef4d-c151-e3de-9918-8ae6344a9053/a/80ce6f82-b980-4083-8543-418de6924722?tenantId=def44f5f-0783-4b05-8f2f-dd615c5dfec4&hint=28db63fb-430d-421c-8147-cbf50482d332&sourcetime=1709804711381",empEmail,empRef,locationInfo,buildingInfo); 
+                                        // Initialize ReqDay with an empty string
+                                        /*ForAll(
+                                            Days, Concat(ReqDay, ThisRecord.Day & ",")
+                                        );
+                                        
+                                        Patch(Requests, Form3.LastSubmit, {Days: Left(ReqDay, Len(ReqDay) - 1)});
+                                        
+                                        */
+                                        //Set(rec,Filter('Smart Parkings','location '=(DropdownCanvas5.Selected.Value)&& building=(DropdownCanvas3.Selected.cra95_building)));
+                                        //Patch(Requests,Form3.LastSubmit,{Smart:rec})
+                                        Patch(
+                                            Requests,Form3_1.LastSubmit,{Smart: LookUp('Smart Parkings',ID="1"),'Employee ID':LookUp(Employee_Details,'Employee Number'="0"),status:"pending"}
+                                        );
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        //'PowerAppV2->GetarowbyID,Sendanemailnotification(V3)'.Run(reqID,empID,Text(DropdownCanvas5.Selected.Value));
+                                        
+                                        Notify("Building: " & buildingInfo, NotificationType.Warning);
+                                        Notify("Location: " & locationInfo, NotificationType.Warning);
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        ClearCollect(Days,{});
+                                        If(CheckboxCanvas1_6.Checked=true,false);
+                                        
+                                        
+                                        
+                                        NewForm(Form3_1);
+                                    UseFluentV9Cards: =true
+                                    Width: =If(RequestScreen.Size=1,320,1275)
+                                    Y: =3
+                                    ZIndex: =1
+
+                                    "'Request Type_DataCard3_1' As typedDataCard.fluentV9ComboBoxOptionSetSingleEditCard":
+                                        BorderColor: =RGBA(122, 138, 143, 1)
+                                        BorderStyle: =BorderStyle.Solid
+                                        BorderThickness: =1
+                                        DataField: ="cra95_requesttype"
+                                        Default: =ThisItem.'Request Type'
+                                        DisplayMode: =Parent.DisplayMode
+                                        DisplayName: =DataSourceInfo([@Requests],DataSourceInfo.DisplayName,cra95_requesttype)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =99
+                                        Required: =false
+                                        Update: =RadioGroupCanvas1.Selected.Value
+                                        Width: =424
+                                        WidthFit: =If(RequestScreen.Size=1,true,false)
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =1
+
+                                        DataCardKey31_1 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =22
+                                            Text: =Parent.DisplayName
+                                            Weight: ='TextCanvas.Weight'.Semibold
+                                            Width: =Parent.Width - 48
+                                            Wrap: =false
+                                            X: =24
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        ErrorMessage20_1 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =30
+                                            Text: =Parent.Error
+                                            Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =Parent.Width - 48
+                                            Wrap: =true
+                                            X: =24
+                                            Y: =RadioGroupCanvas1.Y + RadioGroupCanvas1.Height
+                                            ZIndex: =3
+
+                                        StarVisible20_1 As Text:
+                                            Align: ='TextCanvas.Align'.Center
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =20
+                                            Text: ="*"
+                                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =30
+                                            X: =0
+                                            Y: =DataCardKey31_1.Y
+                                            ZIndex: =4
+
+                                        RadioGroupCanvas1 As Radio.pcfdataset:
+                                            DisplayMode: =DisplayMode.Edit
+                                            Height: =75
+                                            Items: =Choices('Request Type (Requests)')
+                                            Layout: ="Horizontal"
+                                            RadioSize: =16
+                                            Width: =425
+                                            X: =0
+                                            Y: =32
+                                            ZIndex: =5
+
+                                    DataCard1_1 As typedDataCard.blankCard:
+                                        BorderStyle: =BorderStyle.Solid
+                                        BorderThickness: =0
+                                        DisplayMode: =DisplayMode.Edit
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =107
+                                        Width: =425
+                                        WidthFit: =If(RequestScreen.Size=1,true,false)
+                                        X: =1
+                                        Y: =0
+                                        ZIndex: =1
+
+                                        DropdownCanvas5_1 As Dropdown.pcfdataset:
+                                            AccessibleLabel: ="Please select"
+                                            Appearance: ="FilledDarker"
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            Height: =32
+                                            Items: |
+                                                =If(Text(RadioGroupCanvas1.Selected.Value)="General",Distinct('General Parkings',cra95_location),Text(RadioGroupCanvas1.Selected.Value)="Smart",Distinct('Smart Parkings',cra95_location),Text(RadioGroupCanvas1.Selected.Value)="Temporary"||Text(RadioGroupCanvas1.Selected.Value)="permanent",Distinct('General Parkings',cra95_location))
+                                            Width: =320
+                                            X: =2
+                                            Y: =36
+                                            ZIndex: =1
+
+                                            Value1_1 As PowerApps_CoreControls_DropdownCanvasTemplate_dataField.textualColumn:
+                                                FieldDisplayName: ="Value"
+                                                FieldName: ="Value"
+                                                FieldType: ="s"
+                                                FieldVariantName: ="textualColumn"
+                                                Order: =3
+                                                ZIndex: =18
+
+                                        DataCardKey31_8 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =22
+                                            Text: ="Location"
+                                            Weight: ='TextCanvas.Weight'.Semibold
+                                            Width: =Parent.Width - 48
+                                            Wrap: =false
+                                            X: =2
+                                            Y: =14
+                                            ZIndex: =2
+
+                                    DataCard2_1 As typedDataCard.blankCard:
+                                        BorderStyle: =BorderStyle.Solid
+                                        DisplayMode: =DisplayMode.Edit
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =74
+                                        Width: =425
+                                        WidthFit: =If(RequestScreen.Size=1,true,false)
+                                        X: =2
+                                        Y: =0
+                                        ZIndex: =1
+
+                                        DropdownCanvas3_1 As Dropdown.pcfdataset:
+                                            Appearance: ="FilledDarker"
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            Height: =32
+                                            Items: =If(Len(Text(DropdownCanvas5_1.Selected.Value))=Len("abu dhabii") && Text(RadioGroupCanvas1.Selected.Value)="General"||Text(RadioGroupCanvas1.Selected.Value)="permanent"||Text(RadioGroupCanvas1.Selected.Value)="Temporary",Filter('General Parkings',location="abu dhabi"),Text(DropdownCanvas5_1.Selected.Value)="sharjah" && Text(RadioGroupCanvas1.Selected.Value)="General",Filter('General Parkings',location="sharjah"),(Text(DropdownCanvas5_1.Selected.Value))=("dubai") && Text(RadioGroupCanvas1.Selected.Value)="General",Filter('General Parkings',location="dubai"),Text(DropdownCanvas5_1.Selected.Value)="ajman" && Text(RadioGroupCanvas1.Selected.Value)="General",Filter('General Parkings',location="ajman"),(Text(DropdownCanvas5_1.Selected.Value))=("dubai") && Text(RadioGroupCanvas1.Selected.Value)="Smart",Filter('Smart Parkings',location="dubai"),Text(DropdownCanvas5_1.Selected.Value)="ajman" && Text(RadioGroupCanvas1.Selected.Value)="Smart",Filter('Smart Parkings',location="ajman"))
+                                            Width: =320
+                                            X: =8
+                                            Y: =34
+                                            ZIndex: =1
+
+                                            Building4_1 As PowerApps_CoreControls_DropdownCanvasTemplate_dataField.textualColumn:
+                                                FieldDisplayName: ="Building"
+                                                FieldName: ="cra95_building"
+                                                FieldType: ="s"
+                                                FieldVariantName: ="textualColumn"
+                                                Order: =3
+                                                ZIndex: =11
+
+                                        DataCardKey31_9 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =22
+                                            Text: ="Building"
+                                            Weight: ='TextCanvas.Weight'.Semibold
+                                            Width: =Parent.Width - 48
+                                            Wrap: =false
+                                            X: =8
+                                            Y: =12
+                                            ZIndex: =2
+
+                                    Days_DataCard1_1 As typedDataCard.fluentV9TextualEditCard:
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_days"
+                                        Default: =ThisItem.Days
+                                        DisplayMode: =Parent.DisplayMode
+                                        DisplayName: =DataSourceInfo([@Requests],DataSourceInfo.DisplayName,cra95_days)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =82
+                                        MaxLength: =DataSourceInfo([@Requests], DataSourceInfo.MaxLength, cra95_days)
+                                        Required: =false
+                                        Update: =Concat(Days,Day &",")
+                                        Visible: |
+                                            =true
+                                        Width: =425
+                                        WidthFit: =If(RequestScreen.Size=1,true,false)
+                                        X: =1
+                                        Y: =1
+                                        ZIndex: =1
+
+                                        Container2_3 As groupContainer.manualLayoutContainer:
+                                            Height: =75
+                                            Width: |
+                                                =550
+                                            ZIndex: =1
+
+                                            Gallery16_6 As gallery.galleryVertical:
+                                                '#CopilotOverlayLabel': ="Filtered"
+                                                DelayItemLoading: =true
+                                                DisplayMode: =If(Text(RadioGroupCanvas1.Selected.Value)="Temporary",DisplayMode.Edit,DisplayMode.Disabled)
+                                                Height: =75
+                                                Items: =["Mon","Tue","Wed","Thurs","Fri","Sat","Sun"]
+                                                Layout: =Layout.Vertical
+                                                LoadingSpinner: =LoadingSpinner.Data
+                                                TemplateSize: =79
+                                                Width: =Parent.Width
+                                                WrapCount: =7
+                                                ZIndex: =1
+
+                                                CheckboxCanvas1_6 As Checkbox:
+                                                    BasePaletteColor: =RGBA(249, 83, 109, 1)
+                                                    CheckboxSize: =16
+                                                    Checked: =false
+                                                    DisplayMode: =DisplayMode.Edit
+                                                    FontColor: =
+                                                    Height: =32
+                                                    Label: =ThisItem.Value
+                                                    OnCheck: |-
+                                                        =Collect(Days,{
+                                                            Day:ThisItem.Value
+                                                        })
+                                                    OnSelect: =Select(Parent)
+                                                    OnUncheck: =RemoveIf(Days,Day=ThisItem.Value)
+                                                    Width: =72
+                                                    X: =0
+                                                    Y: =28
+                                                    ZIndex: =6
+
+                                    "'start date_DataCard1_1' As typedDataCard.fluentV9DateTimeEditCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_startdate"
+                                        Default: =ThisItem.'start date'
+                                        DisplayMode: =Parent.DisplayMode
+                                        DisplayName: =DataSourceInfo([@Requests],DataSourceInfo.DisplayName,cra95_startdate)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =73
+                                        Required: =false
+                                        Update: =If(Not IsBlank(DateValue2_1.SelectedDate), Date(Year(DateValue2_1.SelectedDate), Month(DateValue2_1.SelectedDate), Day(DateValue2_1.SelectedDate)))
+                                        Width: =425
+                                        WidthFit: =If(RequestScreen.Size=1,true,false)
+                                        X: =0
+                                        Y: =2
+                                        ZIndex: =1
+
+                                        DataCardKey2_1 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =22
+                                            Text: =Parent.DisplayName
+                                            Weight: ='TextCanvas.Weight'.Semibold
+                                            Width: =Parent.Width - 48
+                                            Wrap: =false
+                                            X: =48
+                                            Y: =14
+                                            ZIndex: =1
+
+                                        "DateValue2_1 As 'Date picker'":
+                                            AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                            Appearance: ="FilledDarker"
+                                            BasePaletteColor: =
+                                            BorderStyle: =""
+                                            DisplayMode: =Parent.DisplayMode
+                                            FontColor: =
+                                            Height: =32
+                                            SelectedDate: =Parent.Default
+                                            ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                            Width: =112
+                                            X: =24
+                                            Y: =DataCardKey2_1.Y + DataCardKey2_1.Height + 4
+                                            ZIndex: =2
+
+                                        Separator2_1 As Text:
+                                            Align: ='TextCanvas.Align'.Center
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =
+                                            Text: |-
+                                                =":"
+                                            Width: =10
+                                            X: =
+                                            Y: =
+                                            ZIndex: =4
+
+                                        ErrorMessage2_1 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =30
+                                            Text: =Parent.Error
+                                            Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =Parent.Width - 48
+                                            Wrap: =true
+                                            X: =24
+                                            Y: =DateValue2_1.Y + DateValue2_1.Height
+                                            ZIndex: =6
+
+                                    "'End Date_DataCard1_1' As typedDataCard.fluentV9DateTimeEditCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_enddate"
+                                        Default: =ThisItem.'End Date'
+                                        DisplayMode: =Parent.DisplayMode
+                                        DisplayName: =DataSourceInfo([@Requests],DataSourceInfo.DisplayName,cra95_enddate)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =100
+                                        Required: =true
+                                        Update: =If(Not IsBlank(DateValue3_1.SelectedDate), Date(Year(DateValue3_1.SelectedDate), Month(DateValue3_1.SelectedDate), Day(DateValue3_1.SelectedDate)))
+                                        Width: =425
+                                        WidthFit: =If(RequestScreen.Size=1,true,false)
+                                        X: =1
+                                        Y: =2
+                                        ZIndex: =1
+
+                                        DataCardKey3_1 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =22
+                                            Text: =Parent.DisplayName
+                                            Weight: ='TextCanvas.Weight'.Semibold
+                                            Width: =Parent.Width - 48
+                                            Wrap: =false
+                                            X: =48
+                                            Y: =14
+                                            ZIndex: =1
+
+                                        "DateValue3_1 As 'Date picker'":
+                                            AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                            Appearance: ="FilledDarker"
+                                            BasePaletteColor: =
+                                            BorderStyle: =""
+                                            DisplayMode: =Parent.DisplayMode
+                                            FontColor: =
+                                            Height: =37
+                                            SelectedDate: =Parent.Default
+                                            ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                            Width: =112
+                                            X: =24
+                                            Y: =DataCardKey3_1.Y + DataCardKey3_1.Height + 4
+                                            ZIndex: =2
+
+                                        ErrorMessage5_1 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =30
+                                            Text: =Parent.Error
+                                            Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =Parent.Width - 48
+                                            Wrap: =true
+                                            X: =24
+                                            Y: =DateValue3_1.Y + DateValue3_1.Height
+                                            ZIndex: =6
+
+                                    "'Reason Justification_DataCard2_1' As typedDataCard.fluentV9TextualEditCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_reasonjustification"
+                                        Default: =ThisItem.'Reason Justification'
+                                        DisplayMode: =Parent.DisplayMode
+                                        DisplayName: =DataSourceInfo([@Requests],DataSourceInfo.DisplayName,cra95_reasonjustification)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =14
+                                        MaxLength: =DataSourceInfo([@Requests], DataSourceInfo.MaxLength, cra95_reasonjustification)
+                                        Required: =false
+                                        Update: =DataCardValue19_1.Value
+                                        Width: =425
+                                        WidthFit: =If(RequestScreen.Size=1,true,false)
+                                        X: =0
+                                        Y: =1
+                                        ZIndex: =2
+
+                                        DataCardKey20_1 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =22
+                                            Text: =Parent.DisplayName
+                                            Weight: ='TextCanvas.Weight'.Semibold
+                                            Width: =Parent.Width - 48
+                                            Wrap: =false
+                                            X: =24
+                                            Y: =0
+                                            ZIndex: =1
+
+                                        "DataCardValue19_1 As 'Text input'":
+                                            AccessibleLabel: =Parent.DisplayName
+                                            Appearance: ="FilledDarker"
+                                            BasePaletteColor: =
+                                            BorderStyle: =""
+                                            DisplayMode: =Parent.DisplayMode
+                                            FontColor: =
+                                            Height: =62
+                                            Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                            Required: =Parent.Required
+                                            TriggerOutput: ="FocusOut"
+                                            ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                            Value: =Parent.Default
+                                            Width: =Parent.Width - 48
+                                            X: =24
+                                            Y: =DataCardKey20_1.Y + DataCardKey20_1.Height + 4
+                                            ZIndex: =2
+
+                                        ErrorMessage17_1 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =30
+                                            Text: =Parent.Error
+                                            Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =Parent.Width - 48
+                                            Wrap: =true
+                                            X: =24
+                                            Y: =DataCardValue19_1.Y + DataCardValue19_1.Height
+                                            ZIndex: =3
+
+                                        StarVisible17_1 As Text:
+                                            Align: ='TextCanvas.Align'.Center
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =30
+                                            Text: ="*"
+                                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =30
+                                            X: =0
+                                            Y: =DataCardKey20_1.Y
+                                            ZIndex: =4
+
+                                    "'Required Time_DataCard2_1' As typedDataCard.fluentV9ComboBoxOptionSetSingleEditCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_requiredtime"
+                                        Default: =ThisItem.'Required Time'
+                                        DisplayMode: =Parent.DisplayMode
+                                        DisplayName: =DataSourceInfo([@Requests],DataSourceInfo.DisplayName,cra95_requiredtime)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =50
+                                        Required: =false
+                                        Update: =RadioGroupCanvas3.Selected.Value
+                                        Width: =425
+                                        WidthFit: =If(RequestScreen.Size=1,true,false)
+                                        X: =2
+                                        Y: =1
+                                        ZIndex: =2
+
+                                        DataCardKey21_1 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =22
+                                            Text: =Parent.DisplayName
+                                            Weight: ='TextCanvas.Weight'.Semibold
+                                            Width: =Parent.Width - 48
+                                            Wrap: =false
+                                            X: =24
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        ErrorMessage18_1 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =30
+                                            Text: =Parent.Error
+                                            Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =Parent.Width - 48
+                                            Wrap: =true
+                                            X: =24
+                                            Y: =RadioGroupCanvas3.Y + RadioGroupCanvas3.Height
+                                            ZIndex: =3
+
+                                        StarVisible18_1 As Text:
+                                            Align: ='TextCanvas.Align'.Center
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =20
+                                            Text: ="*"
+                                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =30
+                                            X: =0
+                                            Y: =DataCardKey21_1.Y
+                                            ZIndex: =4
+
+                                        RadioGroupCanvas3 As Radio.pcfdataset:
+                                            DisplayMode: =DisplayMode.Edit
+                                            Height: =39
+                                            Items: =Choices('Required Time (Requests)')
+                                            Layout: ="Horizontal"
+                                            RadioSize: =16
+                                            Width: =276
+                                            X: =40
+                                            Y: =46
+                                            ZIndex: =5
+
+                                Button2 As button:
+                                    Fill: =RGBA(92, 37, 4, 1)
+                                    Height: =35
+                                    OnSelect: |
+                                        =Set(locationInfo,Text(DropdownCanvas5_1.Selected.Value));
+                                        Set(buildingInfo,Text(DropdownCanvas3_1.Selected.cra95_building));
+                                        SubmitForm(Form3_1);
+                                    Text: ="Submit"
+                                    Width: =127
+                                    X: =928
+                                    Y: =326
+                                    ZIndex: =2
+

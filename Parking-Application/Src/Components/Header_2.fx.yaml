@@ -1,0 +1,19 @@
+Header_2 As CanvasComponent:
+    ContainerWidth: =0
+    Fill: =Color.White
+    Height: =70
+    isVisible: =SideBarContainer.Visible=false
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Icon1_1 As icon.Hamburger:
+        Height: =52
+        Icon: =Icon.Hamburger
+        OnSelect: =Set(isVisible1,!isVisible1)
+        Width: =33
+        X: =14
+        Y: =12
+        ZIndex: =2
+

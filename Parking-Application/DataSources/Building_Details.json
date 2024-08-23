@@ -1,0 +1,168 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cra95_building_detailses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cra95_building_details",
+    "MaxGetRowsCount": 500,
+    "Name": "Building_Details",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cra95_area": "Area",
+      "cra95_building": "Building",
+      "cra95_building_details_AsyncOperations": "System Jobs",
+      "cra95_building_details_BulkDeleteFailures": "Bulk Delete Failures",
+      "cra95_building_details_DuplicateBaseRecord": "Duplicate Records (cra95_building_details_DuplicateBaseRecord)",
+      "cra95_building_details_DuplicateMatchingRecord": "Duplicate Records (cra95_building_details_DuplicateMatchingRecord)",
+      "cra95_building_details_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cra95_building_details_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cra95_building_details_ProcessSession": "Process Sessions",
+      "cra95_building_details_SyncErrors": "Sync Errors",
+      "cra95_building_detailsid": "Building_Details",
+      "cra95_employee_details_locationID_cra95_buildin": "Employee_Details",
+      "cra95_location": "Location",
+      "cra95_locationtype": "LocationType",
+      "cra95_name": "ID",
+      "cra95_request_building_cra95_building_details": "Requests",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Building_Details",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Building_Details (Views)",
+    "Name": "_cra95_building_details_views",
+    "RelatedEntityName": "Building_Details",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "08023fa1-7f22-4403-ba43-5f4cc6b9a089": "Building_Details Associated View",
+      "3a1b16c4-9b93-4e6d-a2ad-53125891d9bf": "Building_Details Advanced Find View",
+      "4e50acda-5861-4587-a5cc-8f697afa9530": "Building_Details Lookup View",
+      "55587192-fd4c-4a8e-b150-e23346080201": "Active Building_Details",
+      "6194f3e9-8138-4112-bd5c-3626fb1ffdd8": "Inactive Building_Details"
+    }
+  },
+  {
+    "DisplayName": "Area (Building_Details)",
+    "Name": "cra95_building_details_cra95_area",
+    "OptionSetInfoNameMapping": {
+      "1": "floor1",
+      "2": "floor2",
+      "3": "floor3"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_area",
+        "OptionSetReferenceEntityName": "Building_Details"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cra95_area",
+    "RelatedEntityName": "Building_Details",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Building (Building_Details)",
+    "Name": "cra95_building_details_cra95_building",
+    "OptionSetInfoNameMapping": {
+      "1": "Building 1",
+      "2": "Building 2",
+      "3": "Building 3",
+      "4": "Building 4"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_building",
+        "OptionSetReferenceEntityName": "Building_Details"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cra95_building",
+    "RelatedEntityName": "Building_Details",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Location (Building_Details)",
+    "Name": "cra95_building_details_cra95_location",
+    "OptionSetInfoNameMapping": {
+      "1": "Ajman",
+      "2": "Sharjah",
+      "3": "Dubai",
+      "4": "abu dhabi"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_location",
+        "OptionSetReferenceEntityName": "Building_Details"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cra95_location",
+    "RelatedEntityName": "Building_Details",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Building_Details)",
+    "Name": "cra95_building_details_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Building_Details"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Building_Details",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Building_Details)",
+    "Name": "cra95_building_details_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Building_Details"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Building_Details",
+    "Type": "OptionSetInfo"
+  }
+]

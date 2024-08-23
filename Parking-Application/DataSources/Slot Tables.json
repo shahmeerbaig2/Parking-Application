@@ -1,0 +1,141 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cra95_slottables",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cra95_slottable",
+    "MaxGetRowsCount": 500,
+    "Name": "Slot Tables",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cra95_name": "Slot ID",
+      "cra95_request_SlotID_cra95_slottable": "Requests",
+      "cra95_selectedstatus": "selected status",
+      "cra95_slotname": "Slot Name",
+      "cra95_slottable_AsyncOperations": "System Jobs",
+      "cra95_slottable_BulkDeleteFailures": "Bulk Delete Failures",
+      "cra95_slottable_DuplicateBaseRecord": "Duplicate Records (cra95_slottable_DuplicateBaseRecord)",
+      "cra95_slottable_DuplicateMatchingRecord": "Duplicate Records (cra95_slottable_DuplicateMatchingRecord)",
+      "cra95_slottable_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cra95_slottable_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cra95_slottable_ProcessSession": "Process Sessions",
+      "cra95_slottable_SyncErrors": "Sync Errors",
+      "cra95_slottableid": "Slot Table",
+      "cra95_status": "status",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Slot Tables",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Slot Tables (Views)",
+    "Name": "_cra95_slottable_views",
+    "RelatedEntityName": "Slot Tables",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "323a7eb3-4c24-4ef2-b955-f00fc582be37": "Inactive Slot Tables",
+      "4e20ac66-6d82-4eb3-abcb-77374ecf0e09": "Slot Table Advanced Find View",
+      "c350a343-641f-4dd5-866b-99b7a5b3a0fe": "Slot Table Lookup View",
+      "dbd38dfc-88b0-4376-b80d-599c634545d9": "Active Slot Tables",
+      "f72e8299-96e8-4572-9fa0-075d5436c8e2": "Slot Table Associated View"
+    }
+  },
+  {
+    "DisplayName": "selectedStatus",
+    "Name": "cra95_selectedstatus",
+    "OptionSetInfoNameMapping": {
+      "1": "Available",
+      "2": "Occupied"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_selectedstatus",
+        "OptionSetReferenceEntityName": "Slot Tables"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cra95_selectedstatus",
+    "RelatedEntityName": "Slot Tables",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "status (Slot Tables)",
+    "Name": "cra95_slottable_cra95_status",
+    "OptionSetInfoNameMapping": {
+      "1": "Available",
+      "2": "Occupied"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_status",
+        "OptionSetReferenceEntityName": "Slot Tables"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cra95_status",
+    "RelatedEntityName": "Slot Tables",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Slot Tables)",
+    "Name": "cra95_slottable_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Slot Tables"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Slot Tables",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Slot Tables)",
+    "Name": "cra95_slottable_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Slot Tables"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Slot Tables",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "7ee4a6e9-06eb-4966-a852-9097c9858da6",
+    "Name": "PowerAppV2->GetarowbyID,Sendanemailnotification(V3)",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "418640d7-c0da-ee11-904c-000d3adf7783"
+  }
+]

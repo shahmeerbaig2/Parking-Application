@@ -1,0 +1,100 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cra95_generalparkings",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cra95_generalparking",
+    "MaxGetRowsCount": 500,
+    "Name": "General Parkings",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cra95_building": "building",
+      "cra95_generalparking_AsyncOperations": "System Jobs",
+      "cra95_generalparking_BulkDeleteFailures": "Bulk Delete Failures",
+      "cra95_generalparking_DuplicateBaseRecord": "Duplicate Records (cra95_generalparking_DuplicateBaseRecord)",
+      "cra95_generalparking_DuplicateMatchingRecord": "Duplicate Records (cra95_generalparking_DuplicateMatchingRecord)",
+      "cra95_generalparking_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cra95_generalparking_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cra95_generalparking_ProcessSession": "Process Sessions",
+      "cra95_generalparking_SyncErrors": "Sync Errors",
+      "cra95_generalparkingid": "General Parking",
+      "cra95_location": "location",
+      "cra95_name": "ID",
+      "cra95_request_General_cra95_generalparking": "Requests",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "General Parkings",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "General Parkings (Views)",
+    "Name": "_cra95_generalparking_views",
+    "RelatedEntityName": "General Parkings",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "ac4fa167-d975-4ad5-af67-715426a6b256": "General Parking Associated View",
+      "ad55be34-6b63-4ede-b8a3-2441ff7bb50d": "Active General Parkings",
+      "e3175a60-c5d8-4961-89d2-5e76042be015": "General Parking Advanced Find View",
+      "fc10ec6c-248e-4b5b-b151-2a3860e410ca": "General Parking Lookup View",
+      "ff132c2a-3299-44ec-a257-27dd85d62bbe": "Inactive General Parkings"
+    }
+  },
+  {
+    "DisplayName": "Status (General Parkings)",
+    "Name": "cra95_generalparking_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "General Parkings"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "General Parkings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (General Parkings)",
+    "Name": "cra95_generalparking_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "General Parkings"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "General Parkings",
+    "Type": "OptionSetInfo"
+  }
+]

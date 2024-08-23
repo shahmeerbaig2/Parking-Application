@@ -1,0 +1,1270 @@
+LineManagerApproval As screen:
+    Fill: =RGBA(237, 237, 237, 1)
+
+    Container3_17 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Header_12 As Header:
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            ZIndex: =2
+
+        MainContainer_10 As groupContainer.horizontalAutoLayoutContainer:
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
+            Container19_10 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =9
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =2
+
+                subheader1_17 As subheader1_2:
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+
+                Container4_10 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =2
+
+                    Container3_18 As groupContainer.manualLayoutContainer:
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        ZIndex: =2
+
+                        Container6_7 As groupContainer.manualLayoutContainer:
+                            Fill: =Color.White
+                            Height: =597
+                            Width: =1322
+                            X: =14
+                            Y: =12
+                            ZIndex: =1
+
+                            Container17_6 As groupContainer.manualLayoutContainer:
+                                Height: =187
+                                Width: =1275
+                                X: =17
+                                Y: =20
+                                ZIndex: =3
+
+                                FormViewer1_3 As formViewer:
+                                    DataSource: =Employee_Details
+                                    Height: =187
+                                    Item: |
+                                        =LookUp(Employee_Details,'Employee Number'="0")
+                                    NumberOfColumns: =4
+                                    Width: =1275
+                                    ZIndex: =2
+
+                                    "'Employee Name_DataCard1_3' As typedDataCard.textualViewCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_employeename"
+                                        Default: =ThisItem.'Employee Name'
+                                        DisplayMode: =DisplayMode.View
+                                        DisplayName: =DataSourceInfo([@Employee_Details],DataSourceInfo.DisplayName,cra95_employeename)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =82
+                                        Required: =true
+                                        Width: =318
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =2
+
+                                        DataCardKey29_3 As label:
+                                            AutoHeight: =true
+                                            Height: =34
+                                            Text: =Parent.DisplayName 
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            ZIndex: =1
+
+                                        DataCardValue28_3 As label:
+                                            AutoHeight: =true
+                                            DisplayMode: =Parent.DisplayMode
+                                            Height: =27
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Text: =Parent.Default
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey29_3.Y + DataCardKey29_3.Height + 5
+                                            ZIndex: =2
+
+                                    Mobile_DataCard1_3 As typedDataCard.textualViewCard:
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_mobile"
+                                        Default: =ThisItem.Mobile
+                                        DisplayMode: =DisplayMode.View
+                                        DisplayName: =DataSourceInfo([@Employee_Details],DataSourceInfo.DisplayName,cra95_mobile)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =104
+                                        Required: =true
+                                        Width: =318
+                                        X: =1
+                                        Y: =0
+                                        ZIndex: =2
+
+                                        DataCardKey24_3 As label:
+                                            AutoHeight: =true
+                                            Height: =34
+                                            Text: =Parent.DisplayName
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue23_3 As label:
+                                            AutoHeight: =true
+                                            DisplayMode: =Parent.DisplayMode
+                                            Height: =27
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Text: =Parent.Default
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey24_3.Y + DataCardKey24_3.Height + 5
+                                            ZIndex: =2
+
+                                    Email_DataCard1_3 As typedDataCard.emailViewCard:
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_email"
+                                        Default: =ThisItem.Email
+                                        DisplayMode: =DisplayMode.View
+                                        DisplayName: =DataSourceInfo([@Employee_Details],DataSourceInfo.DisplayName,cra95_email)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =101
+                                        Required: =true
+                                        Width: =318
+                                        X: =2
+                                        Y: =0
+                                        ZIndex: =2
+
+                                        DataCardKey25_3 As label:
+                                            AutoHeight: =true
+                                            Height: =34
+                                            Text: =Parent.DisplayName
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue24_3 As htmlViewer:
+                                            AutoHeight: =true
+                                            DisplayMode: =Parent.DisplayMode
+                                            Height: =31
+                                            HtmlText: |-
+                                                ="<a href='mailto:" & Parent.Default & "'>" & Parent.Default & "</a>"
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey25_3.Y + DataCardKey25_3.Height + 5
+                                            ZIndex: =2
+
+                                    "'Job Title_DataCard1_3' As typedDataCard.textualViewCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_jobtitle"
+                                        Default: =ThisItem.'Job Title'
+                                        DisplayMode: =DisplayMode.View
+                                        DisplayName: =DataSourceInfo([@Employee_Details],DataSourceInfo.DisplayName,cra95_jobtitle)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =78
+                                        Required: =true
+                                        Width: =318
+                                        X: =3
+                                        Y: =0
+                                        ZIndex: =2
+
+                                        DataCardKey26_3 As label:
+                                            AutoHeight: =true
+                                            Height: =34
+                                            Text: =Parent.DisplayName
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue25_3 As label:
+                                            AutoHeight: =true
+                                            DisplayMode: =Parent.DisplayMode
+                                            Height: =27
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Text: =Parent.Default
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey26_3.Y + DataCardKey26_3.Height + 5
+                                            ZIndex: =2
+
+                                    "'Work base location_DataCard1_3' As typedDataCard.textualViewCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_workbaselocation"
+                                        Default: =ThisItem.'Work base location'
+                                        DisplayMode: =DisplayMode.View
+                                        DisplayName: =DataSourceInfo([@Employee_Details],DataSourceInfo.DisplayName,cra95_workbaselocation)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =46
+                                        Required: =true
+                                        Width: =340
+                                        X: =0
+                                        Y: =1
+                                        ZIndex: =2
+
+                                        DataCardKey27_3 As label:
+                                            AutoHeight: =true
+                                            Height: =34
+                                            Text: =Parent.DisplayName
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue26_3 As label:
+                                            AutoHeight: =true
+                                            DisplayMode: =Parent.DisplayMode
+                                            Height: =27
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Text: =Parent.Default
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey27_3.Y + DataCardKey27_3.Height + 5
+                                            ZIndex: =2
+
+                                    "'Employee type_DataCard1_3' As typedDataCard.textualViewCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_employeetype"
+                                        Default: =ThisItem.'Employee type'
+                                        DisplayMode: =DisplayMode.View
+                                        DisplayName: =DataSourceInfo([@Employee_Details],DataSourceInfo.DisplayName,cra95_employeetype)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =51
+                                        Required: =false
+                                        Width: =340
+                                        X: =1
+                                        Y: =1
+                                        ZIndex: =2
+
+                                        DataCardKey28_3 As label:
+                                            AutoHeight: =true
+                                            Height: =34
+                                            Text: =Parent.DisplayName
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue27_3 As label:
+                                            AutoHeight: =true
+                                            DisplayMode: =Parent.DisplayMode
+                                            Height: =27
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Text: =Parent.Default
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey28_3.Y + DataCardKey28_3.Height + 5
+                                            ZIndex: =2
+
+                            Container18_5 As groupContainer.manualLayoutContainer:
+                                Height: =374
+                                Width: =1275
+                                X: =17
+                                Y: =207
+                                ZIndex: =5
+
+                                LineManagerForm As form.PowerApps_CoreControls_Form:
+                                    DataSource: =Requests
+                                    DefaultMode: =FormMode.View
+                                    Height: =374
+                                    Item: =SelecetedRecord
+                                    OnSuccess: =
+                                    UseFluentV9Cards: =true
+                                    Width: =1275
+                                    ZIndex: =1
+
+                                    "'Request Type_DataCard3_3' As typedDataCard.fluentV9ComboBoxOptionSetSingleEditCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_requesttype"
+                                        Default: =ThisItem.'Request Type'
+                                        DisplayMode: =Parent.DisplayMode
+                                        DisplayName: =DataSourceInfo([@Requests],DataSourceInfo.DisplayName,cra95_requesttype)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =70
+                                        Required: =false
+                                        Update: =DataCardValue30_3.Selected.Value
+                                        Width: =350
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =1
+
+                                        DataCardKey31_5 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =22
+                                            Text: =Parent.DisplayName
+                                            Weight: ='TextCanvas.Weight'.Semibold
+                                            Width: =Parent.Width - 48
+                                            Wrap: =false
+                                            X: =24
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue30_3 As Combobox.pcfdataset:
+                                            AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                            Appearance: ="FilledDarker"
+                                            BorderStyle: =""
+                                            DefaultSelectedItems: =[Parent.Default]
+                                            DisplayMode: =Parent.DisplayMode
+                                            Height: =32
+                                            Items: |
+                                                =Choices('Request Type (Requests)')
+                                            ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                            Width: =Parent.Width - 48
+                                            X: =30
+                                            Y: =DataCardKey31_5.Y + DataCardKey31_5.Height + 4
+                                            ZIndex: =2
+
+                                        ErrorMessage20_3 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =30
+                                            Text: =Parent.Error
+                                            Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =Parent.Width - 48
+                                            Wrap: =true
+                                            X: =24
+                                            Y: =DataCardValue30_3.Y + DataCardValue30_3.Height
+                                            ZIndex: =3
+
+                                        StarVisible20_3 As Text:
+                                            Align: ='TextCanvas.Align'.Center
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =20
+                                            Text: ="*"
+                                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =30
+                                            X: =0
+                                            Y: =DataCardKey31_5.Y
+                                            ZIndex: =4
+
+                                    DataCard1_3 As typedDataCard.blankCard:
+                                        BorderStyle: =BorderStyle.Solid
+                                        DisplayMode: =DisplayMode.Edit
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =107
+                                        Width: =350
+                                        X: =1
+                                        Y: =0
+                                        ZIndex: =1
+
+                                        "DataCardValue19_5 As 'Text input'":
+                                            AccessibleLabel: =Parent.DisplayName
+                                            Appearance: ="FilledDarker"
+                                            BasePaletteColor: =
+                                            BorderStyle: =""
+                                            DisplayMode: =Parent.DisplayMode
+                                            FontColor: =
+                                            Height: =32
+                                            Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                            Required: =Parent.Required
+                                            TriggerOutput: ="FocusOut"
+                                            ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                            Value: =If(Text(DataCardValue30_3.Selected.Value)="Smart",ThisItem.Smart.location)
+                                            Width: =Parent.Width - 48
+                                            X: =10
+                                            Y: =36
+                                            ZIndex: =3
+
+                                        DataCardKey31_6 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =22
+                                            Text: ="Location"
+                                            Weight: ='TextCanvas.Weight'.Semibold
+                                            Width: =Parent.Width - 48
+                                            Wrap: =false
+                                            X: =10
+                                            Y: =14
+                                            ZIndex: =4
+
+                                    DataCard2_3 As typedDataCard.blankCard:
+                                        BorderStyle: =BorderStyle.Solid
+                                        DisplayMode: =DisplayMode.Edit
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =74
+                                        Width: =350
+                                        X: =2
+                                        Y: =0
+                                        ZIndex: =1
+
+                                        "DataCardValue19_6 As 'Text input'":
+                                            AccessibleLabel: =Parent.DisplayName
+                                            Appearance: ="FilledDarker"
+                                            BasePaletteColor: =
+                                            BorderStyle: =""
+                                            DisplayMode: =Parent.DisplayMode
+                                            FontColor: =
+                                            Height: =32
+                                            Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                            Required: =Parent.Required
+                                            TriggerOutput: ="FocusOut"
+                                            ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                            Value: =If(Text(DataCardValue30_3.Selected.Value)="Smart",ThisItem.Smart.building)
+                                            Width: =Parent.Width - 48
+                                            X: =2
+                                            Y: =34
+                                            ZIndex: =1
+
+                                        DataCardKey31_7 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =22
+                                            Text: ="Building"
+                                            Weight: ='TextCanvas.Weight'.Semibold
+                                            Width: =Parent.Width - 48
+                                            Wrap: =false
+                                            X: =2
+                                            Y: =12
+                                            ZIndex: =2
+
+                                    "'start date_DataCard1_3' As typedDataCard.fluentV9DateTimeEditCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_startdate"
+                                        Default: =ThisItem.'start date'
+                                        DisplayMode: =Parent.DisplayMode
+                                        DisplayName: =DataSourceInfo([@Requests],DataSourceInfo.DisplayName,cra95_startdate)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =82
+                                        Required: =false
+                                        Update: =If(Not IsBlank(DateValue2_3.SelectedDate), Date(Year(DateValue2_3.SelectedDate), Month(DateValue2_3.SelectedDate), Day(DateValue2_3.SelectedDate)))
+                                        Width: =180
+                                        X: =1
+                                        Y: =2
+                                        ZIndex: =1
+
+                                        DataCardKey2_3 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =22
+                                            Text: =Parent.DisplayName
+                                            Weight: ='TextCanvas.Weight'.Semibold
+                                            Width: =Parent.Width - 48
+                                            Wrap: =false
+                                            X: =48
+                                            Y: =14
+                                            ZIndex: =1
+
+                                        "DateValue2_3 As 'Date picker'":
+                                            AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                            Appearance: ="FilledDarker"
+                                            BasePaletteColor: =
+                                            BorderStyle: =""
+                                            DisplayMode: =Parent.DisplayMode
+                                            FontColor: =
+                                            Height: =32
+                                            SelectedDate: =Parent.Default
+                                            ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                            Width: =120
+                                            X: =24
+                                            Y: =DataCardKey2_3.Y + DataCardKey2_3.Height + 4
+                                            ZIndex: =2
+
+                                        Separator2_3 As Text:
+                                            Align: ='TextCanvas.Align'.Center
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =
+                                            Text: |-
+                                                =":"
+                                            Width: =10
+                                            X: =
+                                            Y: =
+                                            ZIndex: =4
+
+                                        ErrorMessage2_3 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =30
+                                            Text: =Parent.Error
+                                            Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =Parent.Width - 48
+                                            Wrap: =true
+                                            X: =24
+                                            Y: =DateValue2_3.Y + DateValue2_3.Height
+                                            ZIndex: =6
+
+                                    "'End Date_DataCard1_3' As typedDataCard.fluentV9DateTimeEditCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_enddate"
+                                        Default: =ThisItem.'End Date'
+                                        DisplayMode: =Parent.DisplayMode
+                                        DisplayName: =DataSourceInfo([@Requests],DataSourceInfo.DisplayName,cra95_enddate)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =52
+                                        Required: =true
+                                        Update: =If(Not IsBlank(DateValue3_3.SelectedDate), Date(Year(DateValue3_3.SelectedDate), Month(DateValue3_3.SelectedDate), Day(DateValue3_3.SelectedDate)))
+                                        Width: =150
+                                        X: =1
+                                        Y: =2
+                                        ZIndex: =1
+
+                                        DataCardKey3_3 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =22
+                                            Text: =Parent.DisplayName
+                                            Weight: ='TextCanvas.Weight'.Semibold
+                                            Width: =Parent.Width - 48
+                                            Wrap: =false
+                                            X: =48
+                                            Y: =14
+                                            ZIndex: =1
+
+                                        "DateValue3_3 As 'Date picker'":
+                                            AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                            Appearance: ="FilledDarker"
+                                            BasePaletteColor: =
+                                            BorderStyle: =""
+                                            DisplayMode: =Parent.DisplayMode
+                                            FontColor: =
+                                            Height: =32
+                                            SelectedDate: =Parent.Default
+                                            ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                            Width: =118
+                                            X: =24
+                                            Y: =DataCardKey3_3.Y + DataCardKey3_3.Height + 4
+                                            ZIndex: =2
+
+                                        ErrorMessage5_3 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =30
+                                            Text: =Parent.Error
+                                            Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =Parent.Width - 48
+                                            Wrap: =true
+                                            X: =24
+                                            Y: =DateValue3_3.Y + DateValue3_3.Height
+                                            ZIndex: =6
+
+                                    Days_DataCard1_3 As typedDataCard.fluentV9TextualEditCard:
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_days"
+                                        Default: =ThisItem.Days
+                                        DisplayMode: =Parent.DisplayMode
+                                        DisplayName: =DataSourceInfo([@Requests],DataSourceInfo.DisplayName,cra95_days)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =75
+                                        MaxLength: =DataSourceInfo([@Requests], DataSourceInfo.MaxLength, cra95_days)
+                                        Required: =false
+                                        Update: =Concat(Days,Day &",")
+                                        Visible: |
+                                            =true
+                                        Width: =470
+                                        WidthFit: =false
+                                        X: =1
+                                        Y: =2
+                                        ZIndex: =1
+
+                                        Container2_5 As groupContainer.manualLayoutContainer:
+                                            Height: =75
+                                            Width: |
+                                                =550
+                                            ZIndex: =1
+
+                                            Gallery16_8 As gallery.galleryVertical:
+                                                '#CopilotOverlayLabel': ="Filtered"
+                                                DelayItemLoading: =true
+                                                DisplayMode: =If(Text(DataCardValue30_3.Selected.Value)="Temporary",DisplayMode.Edit,DisplayMode.Disabled)
+                                                Height: =75
+                                                Items: =["Mon","Tue","Wed","Thurs","Fri","Sat","Sun"]
+                                                Layout: =Layout.Vertical
+                                                LoadingSpinner: =LoadingSpinner.Data
+                                                TemplateSize: =79
+                                                Width: =Parent.Width
+                                                WrapCount: =7
+                                                ZIndex: =1
+
+                                                CheckboxCanvas1_8 As Checkbox:
+                                                    BasePaletteColor: =RGBA(249, 83, 109, 1)
+                                                    CheckboxSize: =16
+                                                    Checked: =false
+                                                    DisplayMode: =DisplayMode.Edit
+                                                    FontColor: =
+                                                    Height: =32
+                                                    Label: =ThisItem.Value
+                                                    OnCheck: |-
+                                                        =Collect(Days,{
+                                                            Day:ThisItem.Value
+                                                        })
+                                                    OnSelect: =Select(Parent)
+                                                    OnUncheck: =RemoveIf(Days,Day=ThisItem.Value)
+                                                    Width: =72
+                                                    X: =0
+                                                    Y: =28
+                                                    ZIndex: =6
+
+                                    "'Reason Justification_DataCard2_3' As typedDataCard.fluentV9TextualEditCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_reasonjustification"
+                                        Default: =ThisItem.'Reason Justification'
+                                        DisplayMode: =Parent.DisplayMode
+                                        DisplayName: =DataSourceInfo([@Requests],DataSourceInfo.DisplayName,cra95_reasonjustification)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =102
+                                        MaxLength: =DataSourceInfo([@Requests], DataSourceInfo.MaxLength, cra95_reasonjustification)
+                                        Required: =false
+                                        Update: =DataCardValue19_7.Value
+                                        Width: =1347
+                                        WidthFit: =true
+                                        X: =0
+                                        Y: =1
+                                        ZIndex: =2
+
+                                        DataCardKey20_3 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =22
+                                            Text: =Parent.DisplayName
+                                            Weight: ='TextCanvas.Weight'.Semibold
+                                            Width: =Parent.Width - 48
+                                            Wrap: =false
+                                            X: =24
+                                            Y: =0
+                                            ZIndex: =1
+
+                                        "DataCardValue19_7 As 'Text input'":
+                                            AccessibleLabel: =Parent.DisplayName
+                                            Appearance: ="FilledDarker"
+                                            BasePaletteColor: =
+                                            BorderStyle: =""
+                                            DisplayMode: =Parent.DisplayMode
+                                            FontColor: =
+                                            Height: =62
+                                            Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                            Required: =Parent.Required
+                                            TriggerOutput: ="FocusOut"
+                                            ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                            Value: =Parent.Default
+                                            Width: =Parent.Width - 48
+                                            X: =24
+                                            Y: =DataCardKey20_3.Y + DataCardKey20_3.Height + 4
+                                            ZIndex: =2
+
+                                        ErrorMessage17_3 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =30
+                                            Text: =Parent.Error
+                                            Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =Parent.Width - 48
+                                            Wrap: =true
+                                            X: =24
+                                            Y: =DataCardValue19_7.Y + DataCardValue19_7.Height
+                                            ZIndex: =3
+
+                                        StarVisible17_3 As Text:
+                                            Align: ='TextCanvas.Align'.Center
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =30
+                                            Text: ="*"
+                                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =30
+                                            X: =0
+                                            Y: =DataCardKey20_3.Y
+                                            ZIndex: =4
+
+                                    "'Required Time_DataCard2_3' As typedDataCard.fluentV9ComboBoxOptionSetSingleEditCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_requiredtime"
+                                        Default: =ThisItem.'Required Time'
+                                        DisplayMode: =Parent.DisplayMode
+                                        DisplayName: =DataSourceInfo([@Requests],DataSourceInfo.DisplayName,cra95_requiredtime)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =85
+                                        Required: =false
+                                        Update: =DataCardValue20_3.Selected.Value
+                                        Width: =350
+                                        X: =0
+                                        Y: =2
+                                        ZIndex: =2
+
+                                        DataCardKey21_3 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =22
+                                            Text: =Parent.DisplayName
+                                            Weight: ='TextCanvas.Weight'.Semibold
+                                            Width: =Parent.Width - 48
+                                            Wrap: =false
+                                            X: =24
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue20_3 As Combobox.pcfdataset:
+                                            AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                            Appearance: ="FilledDarker"
+                                            BorderStyle: =""
+                                            DefaultSelectedItems: =[Parent.Default]
+                                            DisplayMode: =Parent.DisplayMode
+                                            Height: =32
+                                            Items: =Choices('Required Time (Requests)')
+                                            ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                            Width: =Parent.Width - 48
+                                            X: =24
+                                            Y: =DataCardKey21_3.Y + DataCardKey21_3.Height + 4
+                                            ZIndex: =2
+
+                                        ErrorMessage18_3 As Text:
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =30
+                                            Text: =Parent.Error
+                                            Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =Parent.Width - 48
+                                            Wrap: =true
+                                            X: =24
+                                            Y: =DataCardValue20_3.Y + DataCardValue20_3.Height
+                                            ZIndex: =3
+
+                                        StarVisible18_3 As Text:
+                                            Align: ='TextCanvas.Align'.Center
+                                            BorderStyle: =""
+                                            DisplayMode: =DisplayMode.Edit
+                                            FontColor: =
+                                            Height: =20
+                                            Text: ="*"
+                                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =30
+                                            X: =0
+                                            Y: =DataCardKey21_3.Y
+                                            ZIndex: =4
+
+                                ButtonCanvas7 As Button:
+                                    Align: =""
+                                    BasePaletteColor: =RGBA(249, 83, 109, 1)
+                                    BorderStyle: =""
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =
+                                    Height: =32
+                                    Icon: =""
+                                    IconRotation: =0
+                                    IconStyle: ="Outline"
+                                    Layout: ="Icon before"
+                                    OnSelect: |-
+                                        =Patch(Requests,SelecetedRecord,{status:"Approved"})
+                                    Text: ="Approve"
+                                    VerticalAlign: =""
+                                    Width: =96
+                                    X: =1090
+                                    Y: =324
+                                    ZIndex: =2
+
+                                ButtonCanvas7_1 As Button:
+                                    Align: =""
+                                    BasePaletteColor: =RGBA(189, 178, 176, 1)
+                                    BorderStyle: =""
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =
+                                    Height: =32
+                                    Icon: =""
+                                    IconRotation: =0
+                                    IconStyle: ="Outline"
+                                    Layout: ="Icon before"
+                                    OnSelect: |-
+                                        =Patch(Requests,SelecetedRecord,{status:"Approved"})
+                                    Text: ="Reject"
+                                    VerticalAlign: =""
+                                    Width: =96
+                                    X: =936
+                                    Y: =324
+                                    ZIndex: =3
+
+    Rectangle1_2 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =768
+        Visible: =isPopVisible
+        Width: =1366
+        ZIndex: =2
+
+    Container15_2 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =654
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Visible: =If(isPopVisible,true,false)
+        Width: =548
+        X: =345
+        Y: =60
+        ZIndex: =3
+
+        Container16_2 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(132, 40, 38, 1)
+            FillPortions: =0
+            Height: =100
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =1
+
+            Label3_2 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Size: =20
+                Text: ="Allocating Slots"
+                Width: =Parent.Width
+                ZIndex: =1
+
+        Form9_2 As form.PowerApps_CoreControls_Form:
+            DataSource: =Requests
+            Item: =SelecetedRecord
+            LayoutMinHeight: =250
+            LayoutMinWidth: =400
+            NumberOfColumns: =1
+            UseFluentV9Cards: =true
+            ZIndex: =2
+
+            DataCard4_2 As typedDataCard.blankCard:
+                BorderStyle: =BorderStyle.Solid
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =92
+                Width: =548
+                X: =0
+                Y: =1
+                ZIndex: =1
+
+                DropdownCanvas2_2 As Dropdown.pcfdataset:
+                    Appearance: ="FilledDarker"
+                    BorderStyle: =""
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    Items: =Filter('Slot Tables','selected status'=selectedStatus.Available)
+                    Width: =320
+                    X: =22
+                    Y: =40
+                    ZIndex: =1
+
+                    "'Slot Name2_2' As PowerApps_CoreControls_DropdownCanvasTemplate_dataField.textualColumn":
+                        FieldDisplayName: ="Slot Name"
+                        FieldName: ="cra95_slotname"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =2
+                        ZIndex: =9
+
+                TextCanvas3_5 As Text:
+                    BorderStyle: =""
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =50
+                    Text: =" Assign Slot"
+                    Width: =96
+                    X: =40
+                    Y: =2
+                    ZIndex: =2
+
+            "'Request Type_DataCard4_2' As typedDataCard.fluentV9ComboBoxOptionSetSingleEditCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="cra95_requesttype"
+                Default: =ThisItem.'Request Type'
+                DisplayMode: =DisplayMode.Disabled
+                DisplayName: =DataSourceInfo([@Requests],DataSourceInfo.DisplayName,cra95_requesttype)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =70
+                Required: =false
+                Update: =DataCardValue46_2.Selected.Value
+                Width: =548
+                X: =0
+                Y: =0
+                ZIndex: =3
+
+                DataCardKey53_2 As Text:
+                    BorderStyle: =""
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =22
+                    Text: =Parent.DisplayName
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =Parent.Width - 48
+                    Wrap: =false
+                    X: =24
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue46_2 As Combobox.pcfdataset:
+                    AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                    Appearance: ="FilledDarker"
+                    BorderStyle: =""
+                    DefaultSelectedItems: =[Parent.Default]
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =32
+                    Items: =Choices('Request Type (Requests)')
+                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                    Width: =Parent.Width - 48
+                    X: =24
+                    Y: =DataCardKey53_2.Y + DataCardKey53_2.Height + 4
+                    ZIndex: =2
+
+                ErrorMessage42_2 As Text:
+                    BorderStyle: =""
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =30
+                    Text: =Parent.Error
+                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =Parent.Width - 48
+                    Wrap: =true
+                    X: =24
+                    Y: =DataCardValue46_2.Y + DataCardValue46_2.Height
+                    ZIndex: =3
+
+                StarVisible41_2 As Text:
+                    Align: ='TextCanvas.Align'.Center
+                    BorderStyle: =""
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =20
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    X: =0
+                    Y: =DataCardKey53_2.Y
+                    ZIndex: =4
+
+            "'start date_DataCard4_2' As typedDataCard.fluentV9DateTimeEditCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="cra95_startdate"
+                Default: =ThisItem.'start date'
+                DisplayMode: =DisplayMode.Disabled
+                DisplayName: =DataSourceInfo([@Requests],DataSourceInfo.DisplayName,cra95_startdate)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =70
+                Required: =false
+                Update: =If(Not IsBlank(DateValue8_2.SelectedDate), Date(Year(DateValue8_2.SelectedDate), Month(DateValue8_2.SelectedDate), Day(DateValue8_2.SelectedDate)) + Time(Value(HourValue6_2.Selected.Value), Value(MinuteValue8_2.Selected.Value), Value(Second(DateValue8_2.SelectedDate))))
+                Width: =548
+                X: =0
+                Y: =2
+                ZIndex: =3
+
+                DataCardKey57_2 As Text:
+                    BorderStyle: =""
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =22
+                    Text: =Parent.DisplayName
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =Parent.Width - 48
+                    Wrap: =false
+                    X: =24
+                    Y: =10
+                    ZIndex: =1
+
+                "DateValue8_2 As 'Date picker'":
+                    AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                    Appearance: ="FilledDarker"
+                    BasePaletteColor: =
+                    BorderStyle: =""
+                    DisplayMode: =Parent.DisplayMode
+                    FontColor: =
+                    Height: =32
+                    SelectedDate: =Parent.Default
+                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                    Width: =(Parent.Width - 48) / 2
+                    X: =24
+                    Y: =DataCardKey57_2.Y + DataCardKey57_2.Height + 4
+                    ZIndex: =2
+
+                HourValue6_2 As Dropdown.pcfdataset:
+                    Appearance: ="FilledDarker"
+                    BorderStyle: =""
+                    DefaultSelectedItems: =[Text(Hour(Parent.Default),"00")]
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =28
+                    Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"]
+                    Width: =DateValue8_2.Width / 2 - 10
+                    X: =DateValue8_2.X + DateValue8_2.Width + 10
+                    Y: =DateValue8_2.Y + 1
+                    ZIndex: =3
+
+                Separator8_2 As Text:
+                    Align: ='TextCanvas.Align'.Center
+                    BorderStyle: =""
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =HourValue6_2.Height
+                    Text: |-
+                        =":"
+                    Width: =10
+                    X: =HourValue6_2.X + HourValue6_2.Width
+                    Y: =HourValue6_2.Y
+                    ZIndex: =4
+
+                MinuteValue8_2 As Dropdown.pcfdataset:
+                    Appearance: ="FilledDarker"
+                    BorderStyle: =""
+                    DefaultSelectedItems: =[Text(Minute(Parent.Default),"00")]
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =28
+                    Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]
+                    Width: =HourValue6_2.Width
+                    X: =HourValue6_2.X + HourValue6_2.Width + Separator8_2.Width
+                    Y: =HourValue6_2.Y + 1
+                    ZIndex: =5
+
+                ErrorMessage46_2 As Text:
+                    BorderStyle: =""
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =30
+                    Text: =Parent.Error
+                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =Parent.Width - 48
+                    Wrap: =true
+                    X: =24
+                    Y: =DateValue8_2.Y + DateValue8_2.Height
+                    ZIndex: =6
+
+                StarVisible45_2 As Text:
+                    Align: ='TextCanvas.Align'.Center
+                    BorderStyle: =""
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =20
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    X: =0
+                    Y: =DataCardKey57_2.Y
+                    ZIndex: =7
+
+            "'End Date_DataCard4_2' As typedDataCard.fluentV9DateTimeEditCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="cra95_enddate"
+                Default: =ThisItem.'End Date'
+                DisplayMode: =DisplayMode.Disabled
+                DisplayName: =DataSourceInfo([@Requests],DataSourceInfo.DisplayName,cra95_enddate)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =70
+                Required: =true
+                Update: =If(Not IsBlank(DateValue9_2.SelectedDate), Date(Year(DateValue9_2.SelectedDate), Month(DateValue9_2.SelectedDate), Day(DateValue9_2.SelectedDate)) + Time(Value(HourValue7_2.Selected.Value), Value(MinuteValue9_2.Selected.Value), Value(Second(DateValue9_2.SelectedDate))))
+                Width: =548
+                X: =0
+                Y: =3
+                ZIndex: =3
+
+                DataCardKey58_2 As Text:
+                    BorderStyle: =""
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =22
+                    Text: =Parent.DisplayName
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =Parent.Width - 48
+                    Wrap: =false
+                    X: =24
+                    Y: =10
+                    ZIndex: =1
+
+                "DateValue9_2 As 'Date picker'":
+                    AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                    Appearance: ="FilledDarker"
+                    BasePaletteColor: =
+                    BorderStyle: =""
+                    DisplayMode: =Parent.DisplayMode
+                    FontColor: =
+                    Height: =32
+                    SelectedDate: =Parent.Default
+                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                    Width: =(Parent.Width - 48) / 2
+                    X: =24
+                    Y: =DataCardKey58_2.Y + DataCardKey58_2.Height + 4
+                    ZIndex: =2
+
+                HourValue7_2 As Dropdown.pcfdataset:
+                    Appearance: ="FilledDarker"
+                    BorderStyle: =""
+                    DefaultSelectedItems: =[Text(Hour(Parent.Default),"00")]
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =28
+                    Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"]
+                    Width: =DateValue9_2.Width / 2 - 10
+                    X: =DateValue9_2.X + DateValue9_2.Width + 10
+                    Y: =DateValue9_2.Y + 1
+                    ZIndex: =3
+
+                Separator9_2 As Text:
+                    Align: ='TextCanvas.Align'.Center
+                    BorderStyle: =""
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =HourValue7_2.Height
+                    Text: |-
+                        =":"
+                    Width: =10
+                    X: =HourValue7_2.X + HourValue7_2.Width
+                    Y: =HourValue7_2.Y
+                    ZIndex: =4
+
+                MinuteValue9_2 As Dropdown.pcfdataset:
+                    Appearance: ="FilledDarker"
+                    BorderStyle: =""
+                    DefaultSelectedItems: =[Text(Minute(Parent.Default),"00")]
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =28
+                    Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]
+                    Width: =HourValue7_2.Width
+                    X: =HourValue7_2.X + HourValue7_2.Width + Separator9_2.Width
+                    Y: =HourValue7_2.Y + 1
+                    ZIndex: =5
+
+                ErrorMessage47_2 As Text:
+                    BorderStyle: =""
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =30
+                    Text: =Parent.Error
+                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =Parent.Width - 48
+                    Wrap: =true
+                    X: =24
+                    Y: =DateValue9_2.Y + DateValue9_2.Height
+                    ZIndex: =6
+
+                StarVisible46_2 As Text:
+                    Align: ='TextCanvas.Align'.Center
+                    BorderStyle: =""
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =20
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    X: =0
+                    Y: =DataCardKey58_2.Y
+                    ZIndex: =7
+
+        Container1_2 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =35
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =4
+
+            ButtonCanvas5_6 As Button:
+                Align: =""
+                Appearance: ='ButtonCanvas.Appearance'.Primary
+                BasePaletteColor: =RGBA(189, 178, 176, 1)
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                FontColor: =
+                Height: =32
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Set(isPopVisible,false)
+                Text: ="Cancel"
+                VerticalAlign: =""
+                Width: |
+                    =50
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ButtonCanvas5_7 As Button:
+                Align: =""
+                Appearance: ='ButtonCanvas.Appearance'.Primary
+                BasePaletteColor: =RGBA(249, 83, 109, 1)
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                FontColor: =
+                Height: =32
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: |
+                    =SubmitForm(Form9_2);
+                    Patch(Requests,Form9_2.LastSubmit,{'Slot ID':LookUp('Slot Tables','Slot Name'= DropdownCanvas2_2.Selected.'Slot Name'),status:"Allocated"});
+                    Set(Rec,LookUp('Slot Tables','Slot Name'= DropdownCanvas2_2.Selected.'Slot Name'));
+                    Patch('Slot Tables',Rec,{'selected status':selectedStatus.Occupied});
+                    Set(reqid,(Form9_2.LastSubmit.Request));
+                    Set(email,Form9_2.LastSubmit.'Employee ID'.Email);
+                    Set(name,Form9_2.LastSubmit.'Employee ID'.'Employee Name');
+                    Set(location,DataCardValue19_5.Value);
+                    Set(building,DataCardValue19_6.Value);
+                    Set(Status1,Form9_2.LastSubmit.status);
+                    Set(reqType,Text(DataCardValue30_3.Selected.Value));
+                    Set(SlotID,DropdownCanvas2_2.Selected.'Slot Name');
+                    
+                    AllocationFlow.Run(reqid,email,location,reqType,name,Status1,building,SlotID);
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    //'PowerAppV2->Sendanemail(V2)'.Run();
+                    
+                    Set(isPopVisible,false);
+                    Navigate(BMSscreen);
+                Text: ="Allocate"
+                VerticalAlign: =""
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =2
+

@@ -1,0 +1,318 @@
+[
+  {
+    "DisplayName": "parkings (Views)",
+    "Name": "_cra95_parking_views",
+    "RelatedEntityName": "parkings",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "3094ca82-f560-4595-92aa-122cf9a8d184": "Inactive parkings",
+      "598c4b3e-7013-4d29-a186-743b38b21530": "parking  Advanced Find View",
+      "648022f0-ab7e-428c-81f2-b38940902cd0": "parking  Lookup View",
+      "d1230c9a-44a1-40d9-9356-adeeedf2c63f": "parking  Associated View",
+      "d2fc0acf-cfc0-4efa-b8c2-f1bd269ea44e": "Active parkings"
+    }
+  },
+  {
+    "DisplayName": "EV Charger (parkings)",
+    "Name": "cra95_parking_cra95_evcharger",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_evcharger",
+        "OptionSetReferenceEntityName": "parkings"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "cra95_evcharger",
+    "RelatedEntityName": "parkings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Floor (parkings)",
+    "Name": "cra95_parking_cra95_floor",
+    "OptionSetInfoNameMapping": {
+      "1": "floor1",
+      "2": "floor2",
+      "3": "floor3"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_floor",
+        "OptionSetReferenceEntityName": "parkings"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cra95_floor",
+    "RelatedEntityName": "parkings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "isActive (parkings)",
+    "Name": "cra95_parking_cra95_isactive",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_isactive",
+        "OptionSetReferenceEntityName": "parkings"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "cra95_isactive",
+    "RelatedEntityName": "parkings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "isShaded (parkings)",
+    "Name": "cra95_parking_cra95_isshaded",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_isshaded",
+        "OptionSetReferenceEntityName": "parkings"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "cra95_isshaded",
+    "RelatedEntityName": "parkings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Location (parkings)",
+    "Name": "cra95_parking_cra95_location",
+    "OptionSetInfoNameMapping": {
+      "1": "ajman",
+      "2": "sharjah",
+      "3": "dubai",
+      "4": "abu dhabi"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_location",
+        "OptionSetReferenceEntityName": "parkings"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cra95_location",
+    "RelatedEntityName": "parkings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "People of determination (parkings)",
+    "Name": "cra95_parking_cra95_peopleofdetermination",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_peopleofdetermination",
+        "OptionSetReferenceEntityName": "parkings"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "cra95_peopleofdetermination",
+    "RelatedEntityName": "parkings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "shared Owner (parkings)",
+    "Name": "cra95_parking_cra95_sharedowner",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_sharedowner",
+        "OptionSetReferenceEntityName": "parkings"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "cra95_sharedowner",
+    "RelatedEntityName": "parkings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Slot rating (parkings)",
+    "Name": "cra95_parking_cra95_slotrating",
+    "OptionSetInfoNameMapping": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_slotrating",
+        "OptionSetReferenceEntityName": "parkings"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cra95_slotrating",
+    "RelatedEntityName": "parkings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Slot size (parkings)",
+    "Name": "cra95_parking_cra95_slotsize",
+    "OptionSetInfoNameMapping": {
+      "1": "normal Size",
+      "2": "Big Size"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_slotsize",
+        "OptionSetReferenceEntityName": "parkings"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cra95_slotsize",
+    "RelatedEntityName": "parkings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Slot type (parkings)",
+    "Name": "cra95_parking_cra95_slottype",
+    "OptionSetInfoNameMapping": {
+      "1": "Fixed Allocation",
+      "2": "shared owner",
+      "3": "Visitor",
+      "4": "VIP Visitor"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_slottype",
+        "OptionSetReferenceEntityName": "parkings"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cra95_slottype",
+    "RelatedEntityName": "parkings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (parkings)",
+    "Name": "cra95_parking_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "parkings"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "parkings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (parkings)",
+    "Name": "cra95_parking_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "parkings"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "parkings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cra95_parkings",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cra95_parking",
+    "MaxGetRowsCount": 500,
+    "Name": "parkings",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cra95_evcharger": "EV Charger",
+      "cra95_floor": "Floor",
+      "cra95_isactive": "isActive",
+      "cra95_isshaded": "isShaded",
+      "cra95_location": "Location",
+      "cra95_name": "Parking ID",
+      "cra95_parking_AsyncOperations": "System Jobs",
+      "cra95_parking_BulkDeleteFailures": "Bulk Delete Failures",
+      "cra95_parking_DuplicateBaseRecord": "Duplicate Records (cra95_parking_DuplicateBaseRecord)",
+      "cra95_parking_DuplicateMatchingRecord": "Duplicate Records (cra95_parking_DuplicateMatchingRecord)",
+      "cra95_parking_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cra95_parking_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cra95_parking_ProcessSession": "Process Sessions",
+      "cra95_parking_SyncErrors": "Sync Errors",
+      "cra95_parkingid": "parking ",
+      "cra95_peopleofdetermination": "People of determination",
+      "cra95_request_ParkingID_cra95_parking": "Requests",
+      "cra95_sharedowner": "shared Owner",
+      "cra95_slotenddate": "Slot End date",
+      "cra95_slotid": "Slot ID",
+      "cra95_slotrating": "Slot rating",
+      "cra95_slotsize": "Slot size",
+      "cra95_slottype": "Slot type",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "parkings",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]

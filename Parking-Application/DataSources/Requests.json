@@ -1,0 +1,155 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cra95_requests",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cra95_request",
+    "MaxGetRowsCount": 500,
+    "Name": "Requests",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cra95_bms_RequestID_cra95_request": "BMS",
+      "cra95_building": "building",
+      "cra95_days": "Days",
+      "cra95_employee_details_RequestID_cra95_request": "Employee_Details",
+      "cra95_EmployeeID": "Employee ID",
+      "cra95_enddate": "End Date",
+      "cra95_General": "General",
+      "cra95_name": "Request ID",
+      "cra95_ParkingID": "Parking ID",
+      "cra95_reasonjustification": "Reason Justification",
+      "cra95_request_AsyncOperations": "System Jobs",
+      "cra95_request_BulkDeleteFailures": "Bulk Delete Failures",
+      "cra95_request_DuplicateBaseRecord": "Duplicate Records (cra95_request_DuplicateBaseRecord)",
+      "cra95_request_DuplicateMatchingRecord": "Duplicate Records (cra95_request_DuplicateMatchingRecord)",
+      "cra95_request_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cra95_request_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cra95_request_ProcessSession": "Process Sessions",
+      "cra95_request_SyncErrors": "Sync Errors",
+      "cra95_requestid": "Request",
+      "cra95_requesttype": "Request Type",
+      "cra95_requiredtime": "Required Time",
+      "cra95_SlotID": "Slot ID",
+      "cra95_Smart": "Smart",
+      "cra95_smartparking_requestID_cra95_request": "Smart Parkings",
+      "cra95_startdate": "start date",
+      "cra95_status": "status",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Requests",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Requests (Views)",
+    "Name": "_cra95_request_views",
+    "RelatedEntityName": "Requests",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "153a7955-364f-47f9-9a1d-76e0c8bc93b4": "Request Lookup View",
+      "4ebb333f-78ed-4bc2-817b-f5bc76ec9df9": "Request Associated View",
+      "5bcf786d-18c2-470a-84f8-a5b6415b0266": "Active Requests",
+      "ad03a9ab-0777-4a01-97c6-bcdfe7a2a4bd": "Inactive Requests",
+      "c57e71d0-db0b-4d34-9e36-d320a4619da9": "Request Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Request Type (Requests)",
+    "Name": "cra95_request_cra95_requesttype",
+    "OptionSetInfoNameMapping": {
+      "1": "Temporary",
+      "2": "permanent",
+      "3": "General",
+      "4": "Smart"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_requesttype",
+        "OptionSetReferenceEntityName": "Requests"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cra95_requesttype",
+    "RelatedEntityName": "Requests",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Required Time (Requests)",
+    "Name": "cra95_request_cra95_requiredtime",
+    "OptionSetInfoNameMapping": {
+      "1": "6am to 6pm",
+      "2": "24 hours"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_requiredtime",
+        "OptionSetReferenceEntityName": "Requests"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cra95_requiredtime",
+    "RelatedEntityName": "Requests",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Requests)",
+    "Name": "cra95_request_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Requests"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Requests",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Requests)",
+    "Name": "cra95_request_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Requests"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Requests",
+    "Type": "OptionSetInfo"
+  }
+]

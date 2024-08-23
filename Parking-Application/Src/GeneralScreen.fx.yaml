@@ -1,0 +1,347 @@
+GeneralScreen As screen:
+    Fill: =RGBA(237, 237, 237, 1)
+
+    Container3_19 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Header_13 As Header:
+            isVisible: =SideBarContainer_10.Visible=false
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+
+        MainContainer_11 As groupContainer.horizontalAutoLayoutContainer:
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            SideBarContainer_10 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =If(!isVisible1,0,280)
+                ZIndex: =1
+
+                navigation_4 As navigation:
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+
+            Container19_11 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =9
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =2
+
+                subheader1_20 As subheader1:
+                    Fill: =Color.White
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+
+                Container4_11 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =2
+
+                    Container3_20 As groupContainer.manualLayoutContainer:
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        ZIndex: =1
+
+                        Container6_8 As groupContainer.manualLayoutContainer:
+                            Fill: =Color.White
+                            Height: =571
+                            Width: =If(GeneralScreen.Size=1,350,1304) 
+                            X: =14
+                            Y: =26
+                            ZIndex: =1
+
+                            Form4_2 As form.PowerApps_CoreControls_Form:
+                                DataSource: ='General Parkings'
+                                DefaultMode: =FormMode.New
+                                Height: =If(GeneralScreen.Size=1,150,87)
+                                Item: =Gallery6_2.Selected
+                                NumberOfColumns: =2
+                                OnSuccess: =NewForm(Form4_2);
+                                UseFluentV9Cards: =true
+                                Width: =If(GeneralScreen.Size=1,300,Parent.Width)
+                                Y: =15
+                                ZIndex: =1
+
+                                location_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: ="cra95_location"
+                                    Default: =ThisItem.location
+                                    DisplayMode: =Parent.DisplayMode
+                                    DisplayName: =DataSourceInfo([@'General Parkings'],DataSourceInfo.DisplayName,cra95_location)
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =70
+                                    MaxLength: =DataSourceInfo([@'General Parkings'], DataSourceInfo.MaxLength, cra95_location)
+                                    Required: =false
+                                    Update: =DataCardValue2.Value
+                                    Width: =652
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =2
+
+                                    DataCardKey4 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        FontColor: =
+                                        Height: =22
+                                        Text: =Parent.DisplayName
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =Parent.Width - 48
+                                        Wrap: =false
+                                        X: =24
+                                        Y: =10
+                                        ZIndex: =1
+
+                                    "DataCardValue2 As 'Text input'":
+                                        AccessibleLabel: =Parent.DisplayName
+                                        Appearance: ="FilledDarker"
+                                        BasePaletteColor: =
+                                        BorderStyle: =""
+                                        DisplayMode: =Parent.DisplayMode
+                                        FontColor: =
+                                        Height: =32
+                                        Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                        Required: =Parent.Required
+                                        TriggerOutput: ="FocusOut"
+                                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                        Value: =Parent.Default
+                                        Width: =Parent.Width - 48
+                                        X: =24
+                                        Y: =DataCardKey4.Y + DataCardKey4.Height + 4
+                                        ZIndex: =2
+
+                                    ErrorMessage1 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        FontColor: =
+                                        Height: =30
+                                        Text: =Parent.Error
+                                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                        Width: =Parent.Width - 48
+                                        Wrap: =true
+                                        X: =24
+                                        Y: =DataCardValue2.Y + DataCardValue2.Height
+                                        ZIndex: =3
+
+                                    StarVisible1 As Text:
+                                        Align: ='TextCanvas.Align'.Center
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        FontColor: =
+                                        Height: =30
+                                        Text: ="*"
+                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                        Width: =30
+                                        X: =0
+                                        Y: =DataCardKey4.Y
+                                        ZIndex: =4
+
+                                building_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+                                    BorderStyle: =BorderStyle.Solid
+                                    DataField: ="cra95_building"
+                                    Default: =ThisItem.building
+                                    DisplayMode: =Parent.DisplayMode
+                                    DisplayName: =DataSourceInfo([@'General Parkings'],DataSourceInfo.DisplayName,cra95_building)
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =70
+                                    MaxLength: =DataSourceInfo([@'General Parkings'], DataSourceInfo.MaxLength, cra95_building)
+                                    Required: =false
+                                    Update: =DataCardValue4.Value
+                                    Width: =652
+                                    X: =1
+                                    Y: =0
+                                    ZIndex: =2
+
+                                    DataCardKey5 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        FontColor: =
+                                        Height: =22
+                                        Text: =Parent.DisplayName
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =Parent.Width - 48
+                                        Wrap: =false
+                                        X: =24
+                                        Y: =10
+                                        ZIndex: =1
+
+                                    "DataCardValue4 As 'Text input'":
+                                        AccessibleLabel: =Parent.DisplayName
+                                        Appearance: ="FilledDarker"
+                                        BasePaletteColor: =
+                                        BorderStyle: =""
+                                        DisplayMode: =Parent.DisplayMode
+                                        FontColor: =
+                                        Height: =32
+                                        Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                        Required: =Parent.Required
+                                        TriggerOutput: ="FocusOut"
+                                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                        Value: =Parent.Default
+                                        Width: =Parent.Width - 48
+                                        X: =24
+                                        Y: =DataCardKey5.Y + DataCardKey5.Height + 4
+                                        ZIndex: =2
+
+                                    ErrorMessage3 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        FontColor: =
+                                        Height: =30
+                                        Text: =Parent.Error
+                                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                        Width: =Parent.Width - 48
+                                        Wrap: =true
+                                        X: =24
+                                        Y: =DataCardValue4.Y + DataCardValue4.Height
+                                        ZIndex: =3
+
+                                    StarVisible2 As Text:
+                                        Align: ='TextCanvas.Align'.Center
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        FontColor: =
+                                        Height: =30
+                                        Text: ="*"
+                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                        Width: =30
+                                        X: =0
+                                        Y: =DataCardKey5.Y
+                                        ZIndex: =4
+
+                            ButtonCanvas5_8 As Button:
+                                Align: =""
+                                BasePaletteColor: =RGBA(249, 83, 109, 1)
+                                BorderStyle: =""
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =
+                                Height: =32
+                                Icon: =""
+                                IconRotation: =0
+                                IconStyle: ="Outline"
+                                Layout: ="Icon before"
+                                OnSelect: |
+                                    =SubmitForm(Form4_2);
+                                Text: ="Submit"
+                                VerticalAlign: =""
+                                Width: =If(GeneralScreen.Size=1,70,96)
+                                X: =If(GeneralScreen.Size=1,265,1082)
+                                Y: =118
+                                ZIndex: =2
+
+                            Container17_7 As groupContainer.manualLayoutContainer:
+                                Height: =397
+                                RadiusBottomLeft: =14
+                                RadiusBottomRight: =14
+                                RadiusTopLeft: =14
+                                RadiusTopRight: =14
+                                Width: =If(GeneralScreen.Size=1,Parent.Width,1260)
+                                X: =If(GeneralScreen.Size=1,0,18)
+                                Y: =166
+                                ZIndex: =3
+
+                                Gallery4_2 As gallery.galleryVertical:
+                                    '#CopilotOverlayLabel': ="Filtered"
+                                    DelayItemLoading: =true
+                                    Fill: =RGBA(162, 23, 17, 1)
+                                    Height: =70
+                                    Items: =tabs
+                                    Layout: =Layout.Vertical
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    TemplateSize: =65
+                                    Width: =If(GeneralScreen.Size=1,Parent.Width,1260)
+                                    WrapCount: =3
+                                    ZIndex: =1
+
+                                    TextCanvas8_2 As Text:
+                                        Align: ='TextCanvas.Align'.Start
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        FontColor: =RGBA(255, 255, 255, 1)
+                                        Height: =32
+                                        Text: =ThisItem.tab
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =96
+                                        X: =If(GeneralScreen.Size=1,0,18)
+                                        Y: =16
+                                        ZIndex: =1
+
+                                Gallery6_2 As gallery.galleryVertical:
+                                    '#CopilotOverlayLabel': ="Filtered"
+                                    DelayItemLoading: =true
+                                    Height: =327
+                                    Items: ='General Parkings'
+                                    Layout: =Layout.Vertical
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    TemplateSize: =56
+                                    Width: =1260
+                                    Y: =70
+                                    ZIndex: =1
+
+                                    TextCanvas11_6 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        FontColor: =
+                                        Height: =27
+                                        Text: =ThisItem.location
+                                        Width: =70
+                                        X: =If(GeneralScreen.Size=1,0,35)
+                                        Y: =10
+                                        ZIndex: =1
+
+                                    TextCanvas11_7 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        FontColor: =
+                                        Height: =27
+                                        Text: =ThisItem.building
+                                        Width: =96
+                                        X: =If(GeneralScreen.Size=1,115,440)
+                                        Y: =10
+                                        ZIndex: =2
+
+                                    TextCanvas11_8 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        FontColor: =
+                                        Height: =27
+                                        Text: =ThisItem.building
+                                        Width: =96
+                                        X: =If(GeneralScreen.Size=1,210,850)
+                                        Y: =10
+                                        ZIndex: =3
+
+                                    Icon11_2 As icon.Trash:
+                                        Color: =RGBA(132, 40, 38, 1)
+                                        Height: =24
+                                        Icon: =Icon.Trash
+                                        OnSelect: =Remove('General Parkings',ThisItem);
+                                        Width: =44
+                                        X: =If(GeneralScreen.Size=1,300,1020)
+                                        Y: =10
+                                        ZIndex: =4
+
+                                    Icon12_2 As icon.Edit:
+                                        Color: =RGBA(132, 40, 38, 1)
+                                        Height: =24
+                                        Icon: =Icon.Edit
+                                        OnSelect: =EditForm(Form4_2);
+                                        Width: =34
+                                        X: =If(GeneralScreen.Size=1,280,1000)
+                                        Y: =10
+                                        ZIndex: =5
+

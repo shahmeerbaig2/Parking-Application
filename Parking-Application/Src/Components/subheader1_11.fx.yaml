@@ -1,0 +1,72 @@
+subheader1_11 As CanvasComponent:
+    AdminScreen: =LoginForm
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =70
+    RequestScreenn: =RequestScreen
+    Width: =1366
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Label2_4 As label:
+        Color: =RGBA(162, 23, 17, 1)
+        Text: ="Parking Setup"
+        X: =60
+        Y: =18
+        ZIndex: =1
+
+    Icon2_4 As icon.ArrowLeft:
+        Color: =RGBA(162, 23, 17, 1)
+        Height: =52
+        Icon: =Icon.ArrowLeft
+        OnSelect: =Back()
+        Width: =42
+        X: =18
+        Y: =12
+        ZIndex: =2
+
+    Button1 As button:
+        Fill: =RGBA(162, 23, 17, 1)
+        FontWeight: =FontWeight.Normal
+        HoverFill: =RGBA(184, 0, 0, 1)
+        OnSelect: =Navigate(subheader1_11.RequestScreenn)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Text: ="Create a request"
+        Width: =177
+        X: =893
+        Y: =12
+        ZIndex: =3
+
+    Button1_1 As button:
+        Fill: =RGBA(162, 23, 17, 1)
+        FontWeight: =FontWeight.Normal
+        HoverFill: =RGBA(184, 0, 0, 1)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Text: ="All Parking Request"
+        Width: =212
+        X: =1083
+        Y: =12
+        ZIndex: =4
+
+    Button1_2 As button:
+        Color: |
+            =RGBA(237, 237, 237, 1)
+        Fill: =RGBA(162, 23, 17, 1)
+        FontWeight: =FontWeight.Normal
+        HoverFill: =RGBA(184, 0, 0, 1)
+        OnSelect: =Navigate(subheader1_11.AdminScreen)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Text: ="Admin Panel"
+        X: =719
+        Y: =12
+        ZIndex: =5
+

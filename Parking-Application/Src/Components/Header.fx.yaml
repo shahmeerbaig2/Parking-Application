@@ -1,0 +1,26 @@
+Header As CanvasComponent:
+    ContainerWidth: =0
+    Fill: =Color.White
+    Height: =70
+    isVisible: =SideBarContainer.Visible=false
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Label1 As label:
+        Text: =User().FullName
+        X: =1216
+        Y: =12
+        ZIndex: =1
+
+    Icon1 As icon.Hamburger:
+        Color: =RGBA(162, 23, 17, 1)
+        Height: =52
+        Icon: =Icon.Hamburger
+        OnSelect: =Set(isVisible1,!isVisible1)
+        Width: =33
+        X: =14
+        Y: =12
+        ZIndex: =2
+

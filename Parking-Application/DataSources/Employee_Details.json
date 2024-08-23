@@ -1,0 +1,129 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cra95_employee_detailses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cra95_employee_details",
+    "MaxGetRowsCount": 500,
+    "Name": "Employee_Details",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cra95_email": "Email",
+      "cra95_employee_details_AsyncOperations": "System Jobs",
+      "cra95_employee_details_BulkDeleteFailures": "Bulk Delete Failures",
+      "cra95_employee_details_DuplicateBaseRecord": "Duplicate Records (cra95_employee_details_DuplicateBaseRecord)",
+      "cra95_employee_details_DuplicateMatchingRecord": "Duplicate Records (cra95_employee_details_DuplicateMatchingRecord)",
+      "cra95_employee_details_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cra95_employee_details_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cra95_employee_details_ProcessSession": "Process Sessions",
+      "cra95_employee_details_SyncErrors": "Sync Errors",
+      "cra95_employee_detailsid": "Employee_Details",
+      "cra95_employeename": "Employee Name",
+      "cra95_employeetype": "Employee type",
+      "cra95_jobtitle": "Job Title",
+      "cra95_linemanagerid": "LineManager",
+      "cra95_locationID": "location ID",
+      "cra95_mobile": "Mobile",
+      "cra95_name": "Employee Number",
+      "cra95_password": "password",
+      "cra95_request_EmployeeID_cra95_employee_details": "Requests",
+      "cra95_RequestID": "Request ID",
+      "cra95_role": "Role",
+      "cra95_workbaselocation": "Work base location",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Employee_Details",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Employee_Details (Views)",
+    "Name": "_cra95_employee_details_views",
+    "RelatedEntityName": "Employee_Details",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "08b964f1-7d88-4cac-9f15-b28cf422a8ba": "Inactive Employee_Details",
+      "85dfa810-516b-4c86-9601-0a8c631350de": "Employee_Details Advanced Find View",
+      "8d8370f1-f513-4c87-a647-187ac35e7643": "Employee_Details Associated View",
+      "91388844-4487-4dc2-aa46-81db8c57056c": "Active Employee_Details",
+      "b12e1c1d-4913-4e79-a811-770517e3582f": "Employee_Details Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (Employee_Details)",
+    "Name": "cra95_employee_details_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Employee_Details"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Employee_Details",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Employee_Details)",
+    "Name": "cra95_employee_details_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Employee_Details"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Employee_Details",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Role",
+    "Name": "cra95_role",
+    "OptionSetInfoNameMapping": {
+      "1": "admin",
+      "2": "employee"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cra95_role",
+        "OptionSetReferenceEntityName": "Employee_Details"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cra95_role",
+    "RelatedEntityName": "Employee_Details",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,206 @@
+LocationSetup As screen:
+    Fill: =RGBA(237, 237, 237, 1)
+
+    Container3_3 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Header_6 As Header:
+            isVisible: =SideBarContainer_1.Visible=false
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+
+        MainContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            SideBarContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =If(!isVisible1,0,280)
+                ZIndex: =1
+
+                navigation_2 As navigation:
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+                    Width: =Parent.Width
+
+            Container19_1 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =9
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =2
+
+                subheader1_19 As subheader1_18:
+                    AlignInContainer: =AlignInContainer.Start
+                    Fill: =Color.White
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+
+                Container4_1 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =2
+
+                    Container21 As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        Fill: =Color.White
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        TextCanvas2 As Text:
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =
+                            Height: =34
+                            Size: =20
+                            Text: ="All Parking Slots"
+                            Weight: ='TextCanvas.Weight'.Bold
+                            Width: =190
+                            X: =40
+                            Y: =40
+                            ZIndex: =1
+
+                        Container23 As groupContainer.manualLayoutContainer:
+                            Height: |
+                                =500
+                            RadiusBottomLeft: =13
+                            RadiusBottomRight: =13
+                            RadiusTopLeft: =13
+                            RadiusTopRight: =13
+                            Width: =If(LocationSetup.Size=1,Parent.Width,969)
+                            X: =If(LocationSetup.Size=1,0,40)
+                            Y: =74
+                            ZIndex: =2
+
+                            Gallery5 As gallery.galleryVertical:
+                                '#CopilotOverlayLabel': ="Filtered"
+                                DelayItemLoading: =true
+                                Height: =431
+                                Items: =parkings
+                                Layout: =Layout.Vertical
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplateSize: =426
+                                Width: =969
+                                Y: =69
+                                ZIndex: =1
+
+                                TextCanvas5 As Text:
+                                    Align: ='TextCanvas.Align'.Center
+                                    BorderStyle: =""
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =
+                                    Height: =32
+                                    Size: =If(LocationSetup.Size=1,8,16)
+                                    Text: =ThisItem.'Parking ID'
+                                    Weight: ='TextCanvas.Weight'.Bold
+                                    Width: =51
+                                    X: =2
+                                    Y: =12
+                                    ZIndex: =1
+
+                                TextCanvas6 As Text:
+                                    Align: ='TextCanvas.Align'.Center
+                                    BorderStyle: =""
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =
+                                    Height: =32
+                                    Text: =ThisItem.Location
+                                    Weight: ='TextCanvas.Weight'.Bold
+                                    Width: =51
+                                    X: =If(LocationSetup.Size=1,120,320)
+                                    Y: =12
+                                    ZIndex: =2
+
+                                TextCanvas7 As Text:
+                                    BorderStyle: =""
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =
+                                    Height: =32
+                                    Text: ="Building 1"
+                                    Weight: ='TextCanvas.Weight'.Bold
+                                    Width: =96
+                                    X: =If(LocationSetup.Size=1,230,640)
+                                    Y: =12
+                                    ZIndex: =3
+
+                                Icon7 As icon.Edit:
+                                    Color: =RGBA(132, 40, 38, 1)
+                                    Height: =44
+                                    Icon: =Icon.Edit
+                                    OnSelect: =Select(Parent)
+                                    Width: =21
+                                    X: =If(LocationSetup.Size=1,320,867)
+                                    ZIndex: =4
+
+                                Icon10 As icon.View:
+                                    Fill: =RGBA(0,0,0,0)
+                                    Height: =24
+                                    Icon: =Icon.View
+                                    OnSelect: =Select(Parent)
+                                    Width: =21
+                                    X: =If(LocationSetup.Size=1,340,905)
+                                    Y: =10
+                                    ZIndex: =5
+
+                            Gallery1 As gallery.galleryVertical:
+                                '#CopilotOverlayLabel': ="Filtered"
+                                DelayItemLoading: =true
+                                Fill: =RGBA(162, 23, 17, 1)
+                                Height: =69
+                                Items: =Parkingtabs
+                                Layout: =Layout.Vertical
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplateSize: =60
+                                Width: =Parent.Width
+                                WrapCount: =3
+                                ZIndex: =2
+
+                                TextCanvas4 As Text:
+                                    AutoHeight: =false
+                                    BorderStyle: =""
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =RGBA(255, 255, 255, 1)
+                                    Height: =64
+                                    Text: =ThisItem.tab
+                                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                                    Weight: ='TextCanvas.Weight'.Bold
+                                    Width: =122
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =1
+
+                        ButtonCanvas9 As Button:
+                            Align: =""
+                            BasePaletteColor: =RGBA(249, 83, 109, 1)
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =
+                            Height: =32
+                            Icon: =""
+                            IconRotation: =0
+                            IconStyle: ="Outline"
+                            Layout: ="Icon before"
+                            OnSelect: =Navigate(LocationFormScreen)
+                            Text: ="New Slot"
+                            VerticalAlign: =""
+                            Visible: =If(LocationSetup.Size=1,true,false)
+                            Width: =96
+                            X: =220
+                            Y: =35
+                            ZIndex: =3
+

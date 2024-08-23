@@ -1,0 +1,329 @@
+{
+  "1ea6197e-a129-401e-b81c-7ffb77b90f86": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Premium",
+      "bypassConsent": true,
+      "displayName": "Microsoft Dataverse",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/dannylevy/fastTrack/Commondataserviceforapps/1.0.1694.3756/commondataserviceforapps/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_commondataserviceforapps",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "cb2490aa-79c1-4917-adbb-f49ef95008e1",
+      "5011b760-488a-4eff-8cae-0645c5070efa",
+      "2f6a22ff-d7e1-43f0-9b47-f9225ef1e5f3"
+    ],
+    "id": "1ea6197e-a129-401e-b81c-7ffb77b90f86"
+  },
+  "24774d5a-27c4-4a21-81ff-afcbdd1d0715": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/patelronak/specialtrain-logicflows-2/1.0.1692.3734/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "2f4fa855-65cd-4b15-8d13-994d8f16a8b1": {
+          "value": "shared_sendmail"
+        },
+        "workflowDisplayName": {
+          "value": "RejectionFlow"
+        },
+        "workflowEntityId": {
+          "value": "0f0305c0-58df-ee11-904d-000d3adf7783"
+        },
+        "workflowName": {
+          "value": "c949d338-6aff-53ef-2983-47f14a001988"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sendmail": {
+          "value": "2f4fa855-65cd-4b15-8d13-994d8f16a8b1"
+        },
+        "workflowDisplayName": {
+          "value": "RejectionFlow"
+        },
+        "workflowEntityId": {
+          "value": "0f0305c0-58df-ee11-904d-000d3adf7783"
+        },
+        "workflowName": {
+          "value": "c949d338-6aff-53ef-2983-47f14a001988"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "RejectionFlow"
+    ],
+    "dependencies": {
+      "shared_sendmail": "2f4fa855-65cd-4b15-8d13-994d8f16a8b1"
+    },
+    "dependents": [],
+    "id": "24774d5a-27c4-4a21-81ff-afcbdd1d0715"
+  },
+  "2f4fa855-65cd-4b15-8d13-994d8f16a8b1": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Mail",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/juanq/killSendgrid/1.0.1693.3746/sendmail/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sendmail",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "cb2490aa-79c1-4917-adbb-f49ef95008e1",
+      "24774d5a-27c4-4a21-81ff-afcbdd1d0715",
+      "b806889c-3dec-4c88-9cf8-9ca8499ac21c",
+      "5011b760-488a-4eff-8cae-0645c5070efa",
+      "2f6a22ff-d7e1-43f0-9b47-f9225ef1e5f3"
+    ],
+    "id": "2f4fa855-65cd-4b15-8d13-994d8f16a8b1"
+  },
+  "2f6a22ff-d7e1-43f0-9b47-f9225ef1e5f3": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/patelronak/specialtrain-logicflows-2/1.0.1692.3734/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "1ea6197e-a129-401e-b81c-7ffb77b90f86": {
+          "value": "shared_commondataserviceforapps"
+        },
+        "2f4fa855-65cd-4b15-8d13-994d8f16a8b1": {
+          "value": "shared_sendmail"
+        },
+        "844f306e-6c9e-4f53-9ed3-1d3994850396": {
+          "value": "shared_approvals"
+        },
+        "workflowDisplayName": {
+          "value": "PowerAppV2 -> Send an email (V2)"
+        },
+        "workflowEntityId": {
+          "value": "36c6c7ae-e4da-ee11-904c-000d3adf7783"
+        },
+        "workflowName": {
+          "value": "3a73a465-e5f3-663a-ec87-89a81094dd64"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_approvals": {
+          "value": "844f306e-6c9e-4f53-9ed3-1d3994850396"
+        },
+        "shared_commondataserviceforapps": {
+          "value": "1ea6197e-a129-401e-b81c-7ffb77b90f86"
+        },
+        "shared_sendmail": {
+          "value": "2f4fa855-65cd-4b15-8d13-994d8f16a8b1"
+        },
+        "workflowDisplayName": {
+          "value": "PowerAppV2 -> Send an email (V2)"
+        },
+        "workflowEntityId": {
+          "value": "36c6c7ae-e4da-ee11-904c-000d3adf7783"
+        },
+        "workflowName": {
+          "value": "3a73a465-e5f3-663a-ec87-89a81094dd64"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerAppV2->Sendanemail(V2)"
+    ],
+    "dependencies": {
+      "shared_approvals": "844f306e-6c9e-4f53-9ed3-1d3994850396",
+      "shared_commondataserviceforapps": "1ea6197e-a129-401e-b81c-7ffb77b90f86",
+      "shared_sendmail": "2f4fa855-65cd-4b15-8d13-994d8f16a8b1"
+    },
+    "dependents": [],
+    "id": "2f6a22ff-d7e1-43f0-9b47-f9225ef1e5f3"
+  },
+  "5011b760-488a-4eff-8cae-0645c5070efa": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/patelronak/specialtrain-logicflows-2/1.0.1692.3734/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "1ea6197e-a129-401e-b81c-7ffb77b90f86": {
+          "value": "shared_commondataserviceforapps"
+        },
+        "2f4fa855-65cd-4b15-8d13-994d8f16a8b1": {
+          "value": "shared_sendmail"
+        },
+        "workflowDisplayName": {
+          "value": "AllocationFlow"
+        },
+        "workflowEntityId": {
+          "value": "4983eb4e-52df-ee11-904d-000d3adf7783"
+        },
+        "workflowName": {
+          "value": "4f5c3953-05a1-b1e7-65dc-6175af0ba7c4"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_commondataserviceforapps": {
+          "value": "1ea6197e-a129-401e-b81c-7ffb77b90f86"
+        },
+        "shared_sendmail": {
+          "value": "2f4fa855-65cd-4b15-8d13-994d8f16a8b1"
+        },
+        "workflowDisplayName": {
+          "value": "AllocationFlow"
+        },
+        "workflowEntityId": {
+          "value": "4983eb4e-52df-ee11-904d-000d3adf7783"
+        },
+        "workflowName": {
+          "value": "4f5c3953-05a1-b1e7-65dc-6175af0ba7c4"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "AllocationFlow"
+    ],
+    "dependencies": {
+      "shared_commondataserviceforapps": "1ea6197e-a129-401e-b81c-7ffb77b90f86",
+      "shared_sendmail": "2f4fa855-65cd-4b15-8d13-994d8f16a8b1"
+    },
+    "dependents": [],
+    "id": "5011b760-488a-4eff-8cae-0645c5070efa"
+  },
+  "844f306e-6c9e-4f53-9ed3-1d3994850396": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Approvals",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1682/1.0.1682.3671/approvals/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_approvals",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "2f6a22ff-d7e1-43f0-9b47-f9225ef1e5f3"
+    ],
+    "id": "844f306e-6c9e-4f53-9ed3-1d3994850396"
+  },
+  "b806889c-3dec-4c88-9cf8-9ca8499ac21c": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/patelronak/specialtrain-logicflows-2/1.0.1692.3734/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "2f4fa855-65cd-4b15-8d13-994d8f16a8b1": {
+          "value": "shared_sendmail"
+        },
+        "workflowDisplayName": {
+          "value": "waitingListFlow"
+        },
+        "workflowEntityId": {
+          "value": "2b36658f-59df-ee11-904d-000d3adf7783"
+        },
+        "workflowName": {
+          "value": "e2254175-b5c5-3eab-6bc7-2b88d0a45343"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sendmail": {
+          "value": "2f4fa855-65cd-4b15-8d13-994d8f16a8b1"
+        },
+        "workflowDisplayName": {
+          "value": "waitingListFlow"
+        },
+        "workflowEntityId": {
+          "value": "2b36658f-59df-ee11-904d-000d3adf7783"
+        },
+        "workflowName": {
+          "value": "e2254175-b5c5-3eab-6bc7-2b88d0a45343"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "waitingListFlow"
+    ],
+    "dependencies": {
+      "shared_sendmail": "2f4fa855-65cd-4b15-8d13-994d8f16a8b1"
+    },
+    "dependents": [],
+    "id": "b806889c-3dec-4c88-9cf8-9ca8499ac21c"
+  },
+  "cb2490aa-79c1-4917-adbb-f49ef95008e1": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/patelronak/specialtrain-logicflows-2/1.0.1692.3734/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "1ea6197e-a129-401e-b81c-7ffb77b90f86": {
+          "value": "shared_commondataserviceforapps"
+        },
+        "2f4fa855-65cd-4b15-8d13-994d8f16a8b1": {
+          "value": "shared_sendmail"
+        },
+        "workflowDisplayName": {
+          "value": "PowerAppV2 -> Get a row by ID,Send an email notification (V3)"
+        },
+        "workflowEntityId": {
+          "value": "418640d7-c0da-ee11-904c-000d3adf7783"
+        },
+        "workflowName": {
+          "value": "82687c71-e3e5-20bb-6a75-63a1bf2dc79d"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_commondataserviceforapps": {
+          "value": "1ea6197e-a129-401e-b81c-7ffb77b90f86"
+        },
+        "shared_sendmail": {
+          "value": "2f4fa855-65cd-4b15-8d13-994d8f16a8b1"
+        },
+        "workflowDisplayName": {
+          "value": "PowerAppV2 -> Get a row by ID,Send an email notification (V3)"
+        },
+        "workflowEntityId": {
+          "value": "418640d7-c0da-ee11-904c-000d3adf7783"
+        },
+        "workflowName": {
+          "value": "82687c71-e3e5-20bb-6a75-63a1bf2dc79d"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerAppV2->GetarowbyID,Sendanemailnotification(V3)"
+    ],
+    "dependencies": {
+      "shared_commondataserviceforapps": "1ea6197e-a129-401e-b81c-7ffb77b90f86",
+      "shared_sendmail": "2f4fa855-65cd-4b15-8d13-994d8f16a8b1"
+    },
+    "dependents": [],
+    "id": "cb2490aa-79c1-4917-adbb-f49ef95008e1"
+  }
+}

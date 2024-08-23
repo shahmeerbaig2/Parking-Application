@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "679a3c1a-457c-464d-b600-5c9ed86df3b3",
+    "Name": "RejectionFlow",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "0f0305c0-58df-ee11-904d-000d3adf7783"
+  }
+]

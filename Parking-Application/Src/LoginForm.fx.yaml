@@ -1,0 +1,213 @@
+LoginForm As screen:
+    Fill: =RGBA(237, 237, 237, 1)
+
+    Container3_8 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Header_3 As Header_2:
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+
+        MainContainer_5 As groupContainer.horizontalAutoLayoutContainer:
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            SideBarContainer_5 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =If(!isVisible1,0,280)
+                ZIndex: =1
+
+                navigation_9 As navigation:
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+                    MenuItems: |-
+                        =Table({
+                            ID:1,
+                            tab1:" General Location",
+                            Screen:LoginForm
+                        
+                        }
+                        ,{
+                            ID:2,
+                            tab1:" Smart Location",
+                            Screen:SmartScreen
+                        
+                        }
+                        ,{
+                            ID:3,
+                            tab1:"parking slot",
+                            Screen:LocationSetup
+                        
+                        },{
+                            ID:4,
+                            tab1:"parking group"
+                        
+                        },{
+                            ID:5,
+                            tab1:"criteria"
+                        
+                        })
+                    Width: =Parent.Width
+
+            Container19_5 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =9
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =2
+
+                subheader1_10 As subheader1:
+                    Fill: =Color.White
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+
+                Container4_5 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =2
+
+                    Container3_9 As groupContainer.manualLayoutContainer:
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        ZIndex: =1
+
+                        Container6_3 As groupContainer.manualLayoutContainer:
+                            Fill: =Color.White
+                            Height: =571
+                            Width: =1304
+                            X: =14
+                            Y: =26
+                            ZIndex: =1
+
+                            Container17_3 As groupContainer.manualLayoutContainer:
+                                Height: =517
+                                Width: =1082
+                                X: =196
+                                Y: =46
+                                ZIndex: =3
+
+    Rectangle7 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =768
+        Width: =1366
+        ZIndex: =2
+
+    Container20 As groupContainer.manualLayoutContainer:
+        Fill: =Color.White
+        Height: =If(LoginForm.Size=1,667,677)
+        Width: =If(LoginForm.Size=1,375,632)
+        X: =If(LoginForm.Size=1,0,367)
+        Y: =If(LoginForm.Size=1,0,63)
+        ZIndex: =3
+
+        TextCanvas20 As Text:
+            Align: =If(LoginForm.Size=1,'TextCanvas.Align'.Start,'TextCanvas.Align'.Center)
+            AutoHeight: =false
+            BorderStyle: =""
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =RGBA(132, 40, 38, 1)
+            Height: =63
+            Size: =32
+            Text: ="Login"
+            Weight: ='TextCanvas.Weight'.Bold
+            Width: =291
+            X: =172
+            Y: =38
+            ZIndex: =1
+
+        Label8 As label:
+            FontWeight: =FontWeight.Bold
+            Text: ="Email"
+            X: =If(LoginForm.Size=1,50,102)
+            Y: =147
+            ZIndex: =3
+
+        "TextInputCanvas2_2 As 'Text input'":
+            Appearance: ="FilledDarker"
+            BasePaletteColor: =
+            BorderStyle: =""
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =
+            Height: =67
+            Placeholder: ="Enter Your Password here"
+            TriggerOutput: ="FocusOut"
+            Type: ='TextInputCanvas.Type'.Password
+            Width: =If(LoginForm.Size=1,300,435)
+            X: =If(LoginForm.Size=1,48,100)
+            Y: =342
+            ZIndex: =4
+
+        Label8_1 As label:
+            FontWeight: =FontWeight.Bold
+            Text: ="Password"
+            X: =If(LoginForm.Size=1,50,102)
+            Y: =283
+            ZIndex: =5
+
+        ButtonCanvas6 As Button:
+            Align: =""
+            Appearance: ='ButtonCanvas.Appearance'.Primary
+            BasePaletteColor: =RGBA(249, 83, 109, 1)
+            BorderStyle: =""
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =
+            Height: =32
+            Icon: =""
+            IconRotation: =0
+            IconStyle: ="Outline"
+            Layout: ="Icon before"
+            OnSelect: |-
+                =Set(userValue,Text(LookUp(Employee_Details,Email=TextInputCanvas2_3.Value And password=TextInputCanvas2_2.Value).Role));
+                If(IsBlankOrError(userValue),Notify("incorrect Username & Password"),Switch(userValue,"admin",Navigate(BMSscreen),"employee",Navigate(Dashboard)));
+            Text: ="LogIn"
+            VerticalAlign: =""
+            Width: =96
+            X: =If(Dashboard.Size=1,150,271)
+            Y: =487
+            ZIndex: =6
+
+        Icon8 As icon.Person:
+            Color: =RGBA(132, 40, 38, 1)
+            Height: =44
+            Icon: =Icon.Person
+            Width: =39
+            X: =If(LoginForm.Size=1,0,49)
+            Y: =213
+            ZIndex: =7
+
+        Icon9 As icon.Lock:
+            Color: =RGBA(132, 40, 38, 1)
+            Height: =46
+            Icon: =Icon.Lock
+            Width: =39
+            X: =If(LoginForm.Size=1,0,49)
+            Y: =363
+            ZIndex: =8
+
+        "TextInputCanvas2_3 As 'Text input'":
+            Appearance: ="FilledDarker"
+            BasePaletteColor: =
+            BorderStyle: =""
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =
+            Height: =67
+            Placeholder: ="Enter Your Email here"
+            TriggerOutput: ="FocusOut"
+            Width: =If(LoginForm.Size=1,300,435)
+            X: =If(LoginForm.Size=1,48,100)
+            Y: =201
+            ZIndex: =9
+

@@ -1,0 +1,39 @@
+Tabs_5 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =55
+    Width: =390
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Gallery4_4 As gallery.galleryVertical:
+        '#CopilotOverlayLabel': ="Filtered"
+        DelayItemLoading: =true
+        Height: =Parent.Height
+        Items: =["Upcoming Parking","My Requests"]
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateFill: =If(ThisItem.IsSelected,RGBA(162, 23, 17, 1),RGBA(0, 0, 0, 0))
+        TemplatePadding: =0
+        TemplateSize: =50
+        Width: =390
+        WrapCount: =2
+        ZIndex: =1
+
+        Button7_2 As button:
+            Color: =If(ThisItem.IsSelected,RGBA(255, 255, 255, 1))
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.Arial
+            Height: =50
+            HoverFill: =RGBA(162, 23, 17, 1)
+            OnSelect: |-
+                =Set(status1,ThisItem.Value);
+                //Set(GlobalTable,NewTable)
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: =ThisItem.Value
+            Width: =195
+            ZIndex: =2
+

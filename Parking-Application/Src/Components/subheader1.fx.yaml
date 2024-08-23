@@ -1,0 +1,24 @@
+subheader1 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =70
+    Width: =1400
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Label2 As label:
+        Color: =RGBA(162, 23, 17, 1)
+        Text: ="Location Setup"
+        X: =60
+        Y: =18
+        ZIndex: =1
+
+    Icon2 As icon.ArrowLeft:
+        Color: =RGBA(162, 23, 17, 1)
+        Height: =52
+        Icon: =Icon.ArrowLeft
+        Width: =42
+        X: =18
+        Y: =12
+        ZIndex: =2
+

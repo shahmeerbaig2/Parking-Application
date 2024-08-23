@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "babc3576-4d51-4aeb-8255-119547185918",
+    "Name": "AllocationFlow",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "4983eb4e-52df-ee11-904d-000d3adf7783"
+  }
+]

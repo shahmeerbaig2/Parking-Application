@@ -1,0 +1,27 @@
+subheader1_2 As CanvasComponent:
+    Fill: =Color.White
+    Height: =70
+    Width: =1360
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Label2_2 As label:
+        Color: =RGBA(162, 23, 17, 1)
+        Height: =32
+        Text: ="request"
+        Width: =131
+        X: =60
+        Y: =22
+        ZIndex: =1
+
+    Icon2_2 As icon.ArrowLeft:
+        Color: =RGBA(162, 23, 17, 1)
+        Height: =52
+        Icon: =Icon.ArrowLeft
+        OnSelect: =Back()
+        Width: =42
+        X: =18
+        Y: =12
+        ZIndex: =2
+

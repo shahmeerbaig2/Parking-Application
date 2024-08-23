@@ -1,0 +1,341 @@
+BMSscreen As screen:
+    Fill: =RGBA(237, 237, 237, 1)
+
+    Container3_14 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Header_10 As Header:
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+
+        MainContainer_8 As groupContainer.horizontalAutoLayoutContainer:
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            SideBarContainer_8 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =If(!isVisible1,0,280)
+                ZIndex: =1
+
+                BMSNavigation_1 As BMSNavigation:
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+                    Width: =Parent.Width
+
+            Container19_8 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =9
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =2
+
+                subheader1_13 As subheader1_2:
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+
+                Container4_8 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =2
+
+                    Container3_15 As groupContainer.manualLayoutContainer:
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        Width: =If(BMSscreen.Size=1,500,250)
+                        ZIndex: =1
+
+                        Container6_6 As groupContainer.manualLayoutContainer:
+                            Fill: =Color.White
+                            Height: =468
+                            Width: =If(BMSscreen.Size=1,600,1322)
+                            X: =14
+                            Y: =140
+                            ZIndex: =1
+
+                            Container18_3 As groupContainer.manualLayoutContainer:
+                                Height: =380
+                                Width: =If(SideBarContainer_8.Width=0,1275,1030)
+                                X: =24
+                                Y: =32
+                                ZIndex: =5
+
+                                Gallery3 As gallery.galleryVertical:
+                                    '#CopilotOverlayLabel': ="Filtered"
+                                    DelayItemLoading: =true
+                                    Fill: =RGBA(162, 23, 17, 1)
+                                    Height: =55
+                                    Items: =DataFields
+                                    Layout: =Layout.Vertical
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(200, Self.Width - 60), Min(280, Self.Height - 60))
+                                    Width: =1257
+                                    WrapCount: =6
+                                    X: =16
+                                    Y: =65
+                                    ZIndex: =1
+
+                                    Label13 As label:
+                                        Color: =RGBA(255, 255, 255, 1)
+                                        Font: =Font.Arial
+                                        Height: =Parent.Height
+                                        OnSelect: =Select(Parent)
+                                        Text: =ThisItem.tab1
+                                        X: =53
+                                        ZIndex: =1
+
+                                Gallery3_2 As gallery.galleryVertical:
+                                    '#CopilotOverlayLabel': ="Filtered"
+                                    DelayItemLoading: =true
+                                    Height: =265
+                                    Items: =Filter(Requests,status=status1 && 'Employee ID'.'Employee Number'="0")
+                                    Layout: =Layout.Vertical
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    TemplateSize: =68
+                                    Width: =1275
+                                    Y: =115
+                                    ZIndex: =2
+
+                                    TextCanvas1_2 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        Font: =Font.Arial
+                                        FontColor: =
+                                        Height: =32
+                                        Text: =ThisItem.'Request ID'
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =96
+                                        X: =20
+                                        Y: =28
+                                        ZIndex: =1
+
+                                    TextCanvas2_2 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        Font: =Font.Arial
+                                        FontColor: =RGBA(0, 0, 0, 1)
+                                        Height: =36
+                                        Text: =ThisItem.'Reason Justification'
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =133
+                                        X: =262
+                                        Y: =24
+                                        ZIndex: =3
+
+                                    TextCanvas3_3 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        Font: =Font.Arial
+                                        FontColor: =If(TextCanvas3_3.Text="pending",Color.DarkRed,Color.Green)
+                                        Height: =32
+                                        Size: =20
+                                        Text: =ThisItem.status
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =96
+                                        X: =473
+                                        Y: =24
+                                        ZIndex: =4
+
+                                    TextCanvas4_2 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        Font: =Font.Arial
+                                        FontColor: =RGBA(0, 0, 0, 1)
+                                        Height: =32
+                                        Text: =ThisItem.'Required Time'
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =121
+                                        X: =704
+                                        Y: =28
+                                        ZIndex: =5
+
+                                    TextCanvas5_2 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        Font: =Font.Arial
+                                        FontColor: =
+                                        Height: =32
+                                        Text: =ThisItem.Smart.building
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =96
+                                        X: =1104
+                                        Y: =20
+                                        ZIndex: =7
+
+                                    Icon6_1 As icon.View:
+                                        Color: =RGBA(184, 0, 0, 1)
+                                        Height: =32
+                                        Icon: =Icon.View
+                                        OnSelect: |-
+                                            =Navigate(DetailRequestScreen,ScreenTransition.Fade,{reqID:ThisItem.'Request ID',empID:ThisItem.'Employee ID'.'Employee Number'});
+                                            Set(SelecetedRecord, ThisItem);
+                                        Width: =30
+                                        X: =1218
+                                        Y: =18
+                                        ZIndex: =9
+
+                                    Label16 As label:
+                                        Font: =Font.Arial
+                                        FontWeight: =FontWeight.Semibold
+                                        OnSelect: =Select(Parent)
+                                        Text: =ThisItem.'Employee ID'.'Employee Name'
+                                        X: =69
+                                        Y: =20
+                                        ZIndex: =10
+
+                                    TextCanvas16 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        Font: =Font.Arial
+                                        FontColor: =
+                                        Height: =32
+                                        Text: =ThisItem.Smart.location
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =96
+                                        X: =916
+                                        Y: =28
+                                        ZIndex: =11
+
+                                Tabs_1 As Tabs:
+                                    X: =16
+                                    Y: =10
+                                    ZIndex: =3
+
+                                Rectangle3 As rectangle:
+                                    Height: =1
+                                    Width: =1257
+                                    X: =16
+                                    Y: =58
+                                    ZIndex: =4
+
+                        Container3 As groupContainer.horizontalAutoLayoutContainer:
+                            Height: =140
+                            LayoutGap: =10
+                            LayoutMode: =LayoutMode.Auto
+                            LayoutOverflowX: =LayoutOverflow.Scroll
+                            LayoutOverflowY: =LayoutOverflow.Scroll
+                            Width: =Parent.Width
+                            X: =2
+                            ZIndex: =10
+
+                            Container22 As groupContainer.manualLayoutContainer:
+                                Fill: =Color.White
+                                Height: =115
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                PaddingLeft: =10
+                                Width: =200
+                                X: =42
+                                Y: =12
+                                ZIndex: =1
+
+                                Label10 As label:
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =57
+                                    Size: =20
+                                    Text: =CountRows(Filter(Requests,true))
+                                    Width: =55
+                                    X: =2
+                                    ZIndex: =1
+
+                                Label11 As label:
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =42
+                                    Text: ="Staff Parking Requests"
+                                    X: =50
+                                    Y: =57
+                                    ZIndex: =2
+
+                                Icon14 As icon.ListScrollWatchlist:
+                                    Color: =RGBA(162, 23, 17, 1)
+                                    Height: =48
+                                    Icon: =Icon.ListScrollWatchlist
+                                    Width: =40
+                                    X: =17
+                                    Y: =51
+                                    ZIndex: =3
+
+                            Container22_3 As groupContainer.manualLayoutContainer:
+                                Fill: =Color.White
+                                Height: =115
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                PaddingLeft: =10
+                                Width: =252
+                                X: =507
+                                Y: =12
+                                ZIndex: =2
+
+                                Label10_3 As label:
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =57
+                                    Size: =20
+                                    Text: =CountRows(Filter(Requests,status="Approved"))
+                                    Width: =55
+                                    X: =2
+                                    ZIndex: =1
+
+                                Label11_3 As label:
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =42
+                                    Text: ="approved request"
+                                    X: =57
+                                    Y: =57
+                                    ZIndex: =2
+
+                                Icon14_3 As icon.ListScrollWatchlist:
+                                    Color: =RGBA(162, 23, 17, 1)
+                                    Icon: =Icon.ListScrollWatchlist
+                                    Width: =45
+                                    X: =12
+                                    Y: =46
+                                    ZIndex: =3
+
+                            Container22_5 As groupContainer.manualLayoutContainer:
+                                Fill: =Color.White
+                                Height: =115
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                PaddingLeft: =10
+                                Width: =252
+                                X: =232
+                                Y: =12
+                                ZIndex: =3
+
+                                Label10_5 As label:
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =57
+                                    Size: =20
+                                    Text: =CountRows(Filter(Requests,status="pending"))
+                                    Width: =55
+                                    X: =2
+                                    ZIndex: =1
+
+                                Label11_5 As label:
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =42
+                                    Text: ="pending request"
+                                    X: =57
+                                    Y: =57
+                                    ZIndex: =2
+
+                                Icon14_5 As icon.ListScrollWatchlist:
+                                    Color: =RGBA(162, 23, 17, 1)
+                                    Icon: =Icon.ListScrollWatchlist
+                                    Width: =45
+                                    X: =12
+                                    Y: =46
+                                    ZIndex: =3
+

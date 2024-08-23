@@ -1,0 +1,130 @@
+App As appinfo:
+    BackEnabled: =true
+    OnStart: |
+        =ClearCollect(
+            tabs,{
+                ID:1,
+                tab:"Location"
+          
+            }
+            ,{
+                ID:2,
+                tab:"Building"
+            }
+            ,{
+                ID:3,
+                tab:"Area"
+            }
+        );
+        ClearCollect(
+            RequestTabs,{
+                ID:1,
+                tab:"Request ID"
+          
+            }
+            ,{
+                ID:2,
+                tab:"Date"
+            }
+            ,{
+                ID:3,
+                tab:"Parking ID"
+            }
+            ,{
+                ID:4,
+                tab:"Building"
+            }
+        );
+        ClearCollect(
+            Parkingtabs,{
+                ID:1,
+                tab:"Parking ID"
+               
+            }
+            ,{
+                ID:2,
+                tab:"Location"
+            }
+            ,{
+                ID:3,
+                tab:"Building"
+            }
+        );
+        ClearCollect(MenuItem,{
+            ID:1,
+            tab1:"Location"
+        
+        }
+        ,{
+            ID:2,
+            tab1:"parking slot"
+        
+        },{
+            ID:3,
+            tab1:"parking group"
+        
+        },{
+            ID:4,
+            tab1:"criteria"
+        
+        });
+        ClearCollect(DataFields,{
+            ID:1,
+            tab1:"Name"
+        
+        }
+        ,{
+            ID:2,
+            tab1:"Reason"
+        
+        },{
+            ID:3,
+            tab1:"status"
+        
+        },{
+            ID:4,
+            tab1:"time required"
+        
+        },{
+            ID:5,
+            tab1:"location"
+        
+        },{
+            ID:6,
+            tab1:"Building"
+        
+        });
+        Set(
+            SelecetedRecord,
+            LookUp(
+                Requests,
+                Request = GUID(Param("supportticketid"))
+            )
+        );
+        If(
+            !IsBlank(SelecetedRecord),
+            ViewForm(LineManagerForm)
+        );
+        
+        
+        Set(isMenuVisible,!isMenuVisible);
+        
+        
+        If(App.ActiveScreen.Size=1,Set(buttonWidth,100),Set(buttonWidth,195););
+        NewForm(Form3)
+    StartScreen: |-
+        =If(
+            IsBlank(Param("supportticketid")),
+            LoginForm,
+            LineManagerApproval
+            
+        )
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

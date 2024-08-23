@@ -1,0 +1,67 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_cra95_building_details_forms",
+      "Namespace": "Building_Details (Forms)",
+      "Values": {
+        "Information": "81d60544-5987-47b0-834b-afaa0e660055"
+      }
+    },
+    {
+      "Kind": "default.cds_cra95_bms_forms",
+      "Namespace": "BMS (Forms)",
+      "Values": {
+        "Information": "e035af77-c06d-4b34-8d74-60dcfd964d02"
+      }
+    },
+    {
+      "Kind": "default.cds_cra95_employee_details_forms",
+      "Namespace": "Employee_Details (Forms)",
+      "Values": {
+        "Information": "35eba8f2-acbc-401d-8ac0-ce998b0c92a9"
+      }
+    },
+    {
+      "Kind": "default.cds_cra95_request_forms",
+      "Namespace": "Requests (Forms)",
+      "Values": {
+        "Information": "53ae1619-3c23-4508-a7a9-9deb064099f8"
+      }
+    },
+    {
+      "Kind": "default.cds_cra95_parking_forms",
+      "Namespace": "parkings (Forms)",
+      "Values": {
+        "Information": "42b3b883-5b82-4ecf-b88e-bca734edc72f"
+      }
+    },
+    {
+      "Kind": "default.cds_cra95_smartparking_forms",
+      "Namespace": "Smart Parkings (Forms)",
+      "Values": {
+        "Information": "55118508-8f03-46e5-909d-df5862e6a072"
+      }
+    },
+    {
+      "Kind": "default.cds_cra95_generalparking_forms",
+      "Namespace": "General Parkings (Forms)",
+      "Values": {
+        "Information": "66e3bb63-ae05-4294-b367-db8cf110513c"
+      }
+    },
+    {
+      "Kind": "default.cds_cra95_slottable_forms",
+      "Namespace": "Slot Tables (Forms)",
+      "Values": {
+        "Information": "2c6d0417-dec1-4284-8a72-d344feb9209c"
+      }
+    },
+    {
+      "Kind": "default.cds_cra95_generalparkingtable_forms",
+      "Namespace": "General Parking Tables (Forms)",
+      "Values": {
+        "Information": "b52a8294-43dd-419b-8e5d-bf31d8e1039c"
+      }
+    }
+  ]
+}

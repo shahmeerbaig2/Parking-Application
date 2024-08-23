@@ -1,0 +1,440 @@
+Dashboard As screen:
+    Fill: =RGBA(237, 237, 237, 1)
+
+    Container3_6 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Header_1 As Header:
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+
+        MainContainer_4 As groupContainer.horizontalAutoLayoutContainer:
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            SideBarContainer_4 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =If(!isVisible1,0,280)
+                ZIndex: =1
+
+                navigation_6 As navigation:
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+
+            Container19_4 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =9
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =2
+
+                subheader1_12 As subheader1_11:
+                    Fill: =Color.White
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+                    Width: =Parent.Width
+
+                Container4_4 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =2
+
+                    Container3_7 As groupContainer.manualLayoutContainer:
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        ZIndex: =1
+
+                        Container6_2 As groupContainer.manualLayoutContainer:
+                            Fill: =Color.White
+                            Height: =If(Dashboard.Size=1,667,582)
+                            Width: =If(Dashboard.Size=1,350,1322)
+                            X: =14
+                            Y: =26
+                            ZIndex: =1
+
+                            Container17_2 As groupContainer.manualLayoutContainer:
+                                Height: =84
+                                Width: =If(SideBarContainer_4.Width=0,1275,1030)
+                                X: =17
+                                Y: =48
+                                ZIndex: =3
+
+                                FormViewer2 As formViewer:
+                                    DataSource: =parkings
+                                    Height: =84
+                                    Item: =LookUp(parkings,'Parking ID'="0000")
+                                    NumberOfColumns: =4
+                                    Width: =Parent.Width
+                                    ZIndex: =1
+
+                                    "'Slot End date_DataCard1' As typedDataCard.textualViewCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_slotenddate"
+                                        Default: =ThisItem.'Slot End date'
+                                        DisplayMode: =DisplayMode.View
+                                        DisplayName: =DataSourceInfo([@parkings],DataSourceInfo.DisplayName,cra95_slotenddate)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =66
+                                        Required: =false
+                                        Width: =If(Dashboard.Size=1,200,257)
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =2
+
+                                        DataCardKey59 As label:
+                                            AutoHeight: =true
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            FontWeight: =FontWeight.Bold
+                                            Height: =34
+                                            PaddingBottom: =0
+                                            Text: ="Date/Time"
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue52 As label:
+                                            AutoHeight: =true
+                                            DisplayMode: =Parent.DisplayMode
+                                            Height: =27
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Text: =Parent.Default
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey59.Y + DataCardKey59.Height + 5
+                                            ZIndex: =2
+
+                                    "'Slot ID_DataCard1' As typedDataCard.textualViewCard":
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_slotid"
+                                        Default: =ThisItem.'Slot ID'
+                                        DisplayMode: =DisplayMode.View
+                                        DisplayName: =DataSourceInfo([@parkings],DataSourceInfo.DisplayName,cra95_slotid)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =94
+                                        Required: =false
+                                        Visible: =If(Dashboard.Size=1,false,true)
+                                        Width: =257
+                                        X: =1
+                                        Y: =0
+                                        ZIndex: =2
+
+                                        DataCardKey63 As label:
+                                            AutoHeight: =true
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            FontWeight: =FontWeight.Bold
+                                            Height: =34
+                                            PaddingBottom: =0
+                                            Text: =Parent.DisplayName
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue56 As label:
+                                            DisplayMode: =Parent.DisplayMode
+                                            Height: =45
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Text: =Parent.Default
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey63.Y + DataCardKey63.Height + 5
+                                            ZIndex: =2
+
+                                    Location_DataCard1 As typedDataCard.comboBoxOptionSetSingleViewCard:
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_location"
+                                        Default: =ThisItem.Location
+                                        DisplayMode: =DisplayMode.View
+                                        DisplayName: =DataSourceInfo([@parkings],DataSourceInfo.DisplayName,cra95_location)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =94
+                                        Required: =true
+                                        Update: =DataCardValue13.Selected
+                                        Width: =If(Dashboard.Size=1,200,257)
+                                        X: =2
+                                        Y: =0
+                                        ZIndex: =2
+
+                                        DataCardKey13 As label:
+                                            AutoHeight: =true
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            FontWeight: =FontWeight.Bold
+                                            Height: =34
+                                            Text: =Parent.DisplayName
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue13 As combobox:
+                                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                            DefaultSelectedItems: =[Parent.Default]
+                                            DisplayFields: =["Value"]
+                                            DisplayMode: =Parent.DisplayMode
+                                            IsSearchable: =false
+                                            Items: =Choices('Location (parkings)')
+                                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                            SearchFields: =["Value"]
+                                            SearchItems: =[]
+                                            SelectMultiple: =false
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey13.Y + DataCardKey13.Height + 5
+                                            ZIndex: =2
+
+                                        ErrorMessage10 As label:
+                                            AutoHeight: =true
+                                            Height: =10
+                                            Live: =Live.Assertive
+                                            PaddingBottom: =0
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Text: =Parent.Error
+                                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardValue13.Y + DataCardValue13.Height
+                                            ZIndex: =3
+
+                                        StarVisible7 As label:
+                                            Align: =Align.Center
+                                            Height: =DataCardKey13.Height
+                                            Text: ="*"
+                                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =30
+                                            Wrap: =false
+                                            Y: =DataCardKey13.Y
+                                            ZIndex: =4
+
+                                    Floor_DataCard1 As typedDataCard.comboBoxOptionSetSingleViewCard:
+                                        BorderStyle: =BorderStyle.Solid
+                                        DataField: ="cra95_floor"
+                                        Default: =ThisItem.Floor
+                                        DisplayMode: =DisplayMode.View
+                                        DisplayName: =DataSourceInfo([@parkings],DataSourceInfo.DisplayName,cra95_floor)
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =89
+                                        Required: =false
+                                        Update: =DataCardValue14.Selected
+                                        Visible: =If(Dashboard.Size=1,false,true)
+                                        Width: =257
+                                        X: =3
+                                        Y: =0
+                                        ZIndex: =2
+
+                                        DataCardKey14 As label:
+                                            AutoHeight: =true
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            FontWeight: =FontWeight.Bold
+                                            Height: =34
+                                            Text: =Parent.DisplayName
+                                            Width: =Parent.Width - 60
+                                            Wrap: =false
+                                            X: =30
+                                            Y: =10
+                                            ZIndex: =1
+
+                                        DataCardValue14 As combobox:
+                                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                            DefaultSelectedItems: =[Parent.Default]
+                                            DisplayFields: =["Value"]
+                                            DisplayMode: =Parent.DisplayMode
+                                            IsSearchable: =false
+                                            Items: =Choices('Floor (parkings)')
+                                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                            SearchFields: =["Value"]
+                                            SearchItems: =[]
+                                            SelectMultiple: =false
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardKey14.Y + DataCardKey14.Height + 5
+                                            ZIndex: =2
+
+                                        ErrorMessage11 As label:
+                                            AutoHeight: =true
+                                            Height: =10
+                                            Live: =Live.Assertive
+                                            PaddingBottom: =0
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Text: =Parent.Error
+                                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                            Width: =Parent.Width - 60
+                                            X: =30
+                                            Y: =DataCardValue14.Y + DataCardValue14.Height
+                                            ZIndex: =3
+
+                                        StarVisible9 As label:
+                                            Align: =Align.Center
+                                            Height: =DataCardKey14.Height
+                                            Text: ="*"
+                                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                            Width: =30
+                                            Wrap: =false
+                                            Y: =DataCardKey14.Y
+                                            ZIndex: =4
+
+                            TextCanvas14 As Text:
+                                BorderStyle: =""
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =
+                                Height: =32
+                                Size: =20
+                                Text: ="Next Parking"
+                                Weight: ='TextCanvas.Weight'.Bold
+                                Width: =141
+                                X: =17
+                                Y: =16
+                                ZIndex: =4
+
+                            Container18 As groupContainer.manualLayoutContainer:
+                                Height: =419
+                                Width: =If(SideBarContainer_4.Width=0,1275,1030)
+                                X: =17
+                                Y: =132
+                                ZIndex: =5
+
+                                Container26 As groupContainer.verticalAutoLayoutContainer:
+                                    Fill: =RGBA(162, 23, 17, 1)
+                                    Height: =50
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMode: =LayoutMode.Auto
+                                    RadiusBottomLeft: =12
+                                    RadiusBottomRight: =12
+                                    RadiusTopLeft: =12
+                                    RadiusTopRight: =12
+                                    Width: =If(Dashboard.Size=1,Parent.Width/4,Parent.Width)
+                                    Y: =74
+                                    ZIndex: =2
+
+                                    Gallery7 As gallery.galleryVertical:
+                                        '#CopilotOverlayLabel': ="Filtered"
+                                        AlignInContainer: =AlignInContainer.SetByContainer
+                                        DelayItemLoading: =true
+                                        Fill: =RGBA(162, 23, 17, 1)
+                                        Height: =Parent.Height
+                                        Items: =RequestTabs
+                                        Layout: =Layout.Vertical
+                                        LayoutMinHeight: =287
+                                        LayoutMinWidth: =320
+                                        LoadingSpinner: =LoadingSpinner.Data
+                                        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                                        Width: =Parent.Width
+                                        WrapCount: =4
+                                        ZIndex: =1
+
+                                        Label14 As label:
+                                            Color: =RGBA(255, 255, 255, 1)
+                                            Fill: =RGBA(162, 23, 17, 1)
+                                            Font: =Font.Arial
+                                            FontWeight: =FontWeight.Bold
+                                            Height: =42
+                                            OnSelect: =Select(Parent)
+                                            Size: =If(Dashboard.Size=1,8,13)
+                                            Text: =ThisItem.tab
+                                            Width: =If(Dashboard.Size=1,63.4375,302.5)
+                                            ZIndex: =1
+
+                                Gallery9 As gallery.galleryVertical:
+                                    '#CopilotOverlayLabel': ="Filtered"
+                                    DelayItemLoading: =true
+                                    Height: =295
+                                    Items: =Requests
+                                    Layout: =Layout.Vertical
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(80, Self.Height - 60))
+                                    Width: =Parent.Width
+                                    Y: =124
+                                    ZIndex: =3
+
+                                    TextCanvas15 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        Font: =Font.Arial
+                                        FontColor: =
+                                        Height: =32
+                                        Size: =If(Dashboard.Size=1,8,14)
+                                        Text: =ThisItem.'Request ID'
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =If(Dashboard.Size=1,50,200)
+                                        X: =10
+                                        Y: =40
+                                        ZIndex: =1
+
+                                    TextCanvas15_1 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        Font: =Font.Arial
+                                        FontColor: =
+                                        Height: =32
+                                        Size: =If(Dashboard.Size=1,8,14)
+                                        Text: =ThisItem.'start date'
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =If(Dashboard.Size=1,100,200)
+                                        X: =If(Dashboard.Size=1,75,310)
+                                        Y: =40
+                                        ZIndex: =2
+
+                                    TextCanvas15_2 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        Font: =Font.Arial
+                                        FontColor: =
+                                        Height: =32
+                                        Size: =If(Dashboard.Size=1,8,14)
+                                        Text: ="0001"
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =If(Dashboard.Size=1,100,200)
+                                        X: =If(Dashboard.Size=1,180,650)
+                                        Y: =40
+                                        ZIndex: =3
+
+                                    TextCanvas15_3 As Text:
+                                        BorderStyle: =""
+                                        DisplayMode: =DisplayMode.Edit
+                                        Font: =Font.Arial
+                                        FontColor: =
+                                        Height: =32
+                                        Size: =If(Dashboard.Size=1,8,14)
+                                        Text: ="Building 1"
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =If(Dashboard.Size=1,100,200)
+                                        X: =If(Dashboard.Size=1,255,966)
+                                        Y: =40
+                                        ZIndex: =4
+
+                                Rectangle2 As rectangle:
+                                    Height: =1
+                                    Width: =1248
+                                    X: =13
+                                    Y: =64
+                                    ZIndex: =5
+
+                                Tabs_6 As Tabs_5:
+                                    X: =13
+                                    Y: =10
+                                    ZIndex: =6
+
